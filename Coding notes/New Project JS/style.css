@@ -1,0 +1,29 @@
+.timeButton{
+    width:200px;
+    height: 100px;
+    border:10px solid aquamarine;
+    border-radius: 30px ;
+    background-color: aquamarine;
+    color: black;
+    cursor:pointer;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    
+
+}
+#timeDisplay{
+    font-size: 50px;
+    color:black;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+#timeCount{
+    text-align: center;
+    border: 100px;
+    border-radius: 20px;
+    
+
+}
+body{
+    background-image: linear-gradient(250deg,white,aquamarine);
+}

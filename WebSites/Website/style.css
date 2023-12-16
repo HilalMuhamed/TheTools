@@ -1,0 +1,144 @@
+html
+{
+    background-color: rgb(15,15,15);
+}
+#ALL
+{
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+#everything
+{
+    position: absolute;
+    top:55%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+#data
+{
+    font-size:50px;
+    color:whitesmoke;
+    font-family: 'Finger Paint';
+    text-shadow: 0px 0px 10px whitesmoke ,0px 0px 1px whitesmoke;
+    animation: anim 5s infinite;
+}
+#Text
+{
+    height: 50px;
+    width: 300px;
+    font-size: 25px;
+    font-family: 'Ink Free';
+    color:rgb(27, 27, 27);
+    font-weight: 500px;
+    border-color: whitesmoke;
+    
+    background-color: rgb(255, 255, 255);
+}
+#Text:hover
+{
+    height: 50px;
+    width: 300px;
+    font-size: 25px;
+    color:whitesmoke;
+    border-color: rgb(15,15,15);
+    background-color: rgb(15,15,15);
+    
+}
+#data:hover
+{
+    font-size:70px;
+    color:whitesmoke;
+    animation: anim,anim2 5s infinite;
+}
+@keyframes anim
+{
+    0%{font-family: "Ink Free";}
+    4%{font-family: 'Bungee Shade'}
+    8%{font-family: 'Caesar Dressing'}
+    12%{font-family: 'Chewy'}
+    16%{font-family: 'Dancing Script'}
+    20%{font-family: 'Edu QLD Beginner'}
+    24%{font-family: 'Faster One'}
+    28%{font-family: 'Finger Paint'}
+    32%{font-family: 'Fredericka the Great'}
+    36%{font-family: 'Stick'}
+    40%{font-family: 'Noto Sans Anatolian Hieroglyphs'}
+    44%{font-family: 'Rubik Marker Hatch'}
+    48%{font-family: 'Inspiration'}
+    52%{font-family: 'Rubik 80s Fade'}
+    56%{font-family: 'VT323'}
+    60%{font-family: 'Titan One'}
+    64%{font-family: 'Rubik Pixels'}
+    68%{font-family:'chiller'}
+    72%{font-family: 'Noto Sans Meroitic'}
+    76%{font-family: 'Noto Sans Linear B'}
+    80%{font-family: 'Noto Music'}
+    84%{font-family: 'Rubik Glitch'}
+    88%{font-family: 'Noto Sans Egyptian Hieroglyphs'}
+    92%{font-family: 'Press Start 2P'}
+    96%{font-family: 'Rubik Moonrocks'}
+    100%{font-family: 'Noto Sans Nabataean'}
+}
+@keyframes anim2
+{
+    50%{
+        color:rgb(15,15,15);
+        text-shadow: 0px 0px 10px rgb(15,15,15);}
+}
+
+#blob
+{
+    
+    height: 100px;
+    aspect-ratio: 1;
+    position: absolute;
+    left:50%;
+    top:50%;
+    translate:-50% -50%;
+    border-radius: 50%;
+    background: white;
+    
+    
+    animation: rotate 20s infinite;
+
+    filter:blur(200px)
+    
+}
+/* @keyframes colorShift {
+    10%{background: rgb(0, 255, 85);}
+    20%{background: linear-gradient(to right,rgb(255, 0, 157),rgb(12, 109, 255));}
+    70%{background: linear-gradient(to right,rgb(255, 217, 4),rgb(255, 57, 22));}
+    80%{background: aqua;}
+    90%{background: linear-gradient(to right,rgb(255, 7, 7),rgb(162, 0, 255));}
+    100%{background:linear-gradient(to right,aqua,rgb(0, 255, 85));} 
+} */
+@keyframes rotate
+{
+    from{rotate:0deg;}
+    
+    /* 50%{scale : 1 1.5;} */
+    
+    to{rotate:360deg;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

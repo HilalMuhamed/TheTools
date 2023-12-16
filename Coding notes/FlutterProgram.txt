@@ -1,0 +1,410 @@
+             Flutter 
+Code 1 Basic
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home:Text('Hello hilal'),
+  ));
+}
+
+Code 2 Just a general layout
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home:Scaffold(
+      appBar: AppBar(
+        title: Text('My first app'),
+        centerTitle: true,
+        ),
+        body:Center(
+          child: Text('Welcome to the App'),
+          ),
+          floatingActionButton: FloatingActionButton(onPressed: null,
+            child:Text('click'),
+          ),
+                ),
+  ));
+}
+
+Code 3 colors and font
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home:Scaffold(
+      appBar: AppBar(
+        title: Text('My first app'),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 135, 250, 139),
+        
+        ),
+        body:Center(
+          child: Text(
+            'Welcome to the App',
+            style:TextStyle(
+              fontSize:30,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 2,
+              color: Color.fromARGB(255, 42, 238, 48),
+              fontFamily: 'Finger',
+              
+              )
+              ),
+
+          ),
+          floatingActionButton: FloatingActionButton(onPressed: (){},
+            child:Text('click'),
+            backgroundColor:Color.fromARGB(255, 153, 231, 64),
+          ),
+                ),
+  ));
+}
+
+
+Code 4 Statless widgets
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Home(),
+  ));
+}
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My first app'),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 135, 250, 139),
+      ),
+      body: Center(
+        child: Text('My new app',
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 2,
+              color: Color.fromARGB(255, 42, 238, 48),
+              fontFamily: 'Finger',
+            )),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('click'),
+        backgroundColor: Color.fromARGB(255, 153, 231, 64),
+      ),
+    );
+  }
+}
+
+Code 5 Images and assets
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Home(),
+  ));
+}
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My first app'),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 135, 250, 139),
+      ),
+      body: Center(
+        child: Image.network('https://i.pinimg.com/originals/93/b6/b3/93b6b3394675254611879081e9cb4024.jpg'),
+        //Image.asset('assets/Annotation 2022-07-10 183107.jpg'),
+            //image: NetworkImage('https://i.pinimg.com/originals/93/b6/b3/93b6b3394675254611879081e9cb4024.jpg'),),
+            //image: AssetImage('assets/Annotation 2022-07-10 183107.jpg'),),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('click'),
+        backgroundColor: Color.fromARGB(255, 153, 231, 64),
+      ),
+    );
+  }
+}
+
+Code 6 Icons
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Home(),
+  ));
+}
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My first app'),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 135, 250, 139),
+      ),
+       body: Center(
+        child : Icon(
+          Icons.shield_moon,
+          color: Colors.blueAccent,
+          size:10,
+          ),
+
+    ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('click'),
+        backgroundColor: Color.fromARGB(255, 153, 231, 64),
+      ),
+    );
+  }
+}
+Code 7 Buttons
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Home(),
+  ));
+}
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My first app'),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 135, 250, 139),
+      ),
+       body: Center(
+        child : 
+          ElevatedButton(
+            onPressed:(){},
+            child:Text('wow'),
+            style: ElevatedButton.styleFrom(primary:Colors.lightBlue,),
+            
+
+          ),
+
+    ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('click'),
+        backgroundColor: Color.fromARGB(255, 153, 231, 64),
+      ),
+    );
+  }
+}
+Code 8 Icon in Button
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Home(),
+  ));
+}
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My first app'),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 135, 250, 139),
+      ),
+       body: Center(
+        child : 
+          ElevatedButton.icon(
+            onPressed:(){},
+            icon:Icon(Icons.mail,),
+            style: ElevatedButton.styleFrom(primary:Colors.amberAccent,),
+            label:Text('mail'),
+ ),
+
+    ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('click'),
+        backgroundColor: Color.fromARGB(255, 153, 231, 64),
+      ),
+    );
+  }
+}
+
+Code 9 Icon Button
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Home(),
+  ));
+}
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My first app'),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 135, 250, 139),
+      ),
+       body: Center(
+        child : IconButton(
+          onPressed: (){},
+          icon:Icon(Icons.electric_bike),
+          color:Colors.pinkAccent)
+
+    ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('click'),
+        backgroundColor: Color.fromARGB(255, 153, 231, 64),
+      ),
+    );
+  }
+}
+
+Code 10 Container and padding 
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Home(),
+  ));
+}
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My first app'),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 135, 250, 139),
+      ),
+       body:
+      Container(
+        padding:EdgeInsets.all(20),
+        margin:EdgeInsets.symmetric(horizontal:45,vertical :45.0),
+        child:Text('This is some text'),
+        color: Colors.amber,
+      ),
+      // Padding(
+      //   padding:EdgeInsets.all(43.0),
+      //   child:Text('hello'),
+      // ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('click'),
+        backgroundColor: Color.fromARGB(255, 153, 231, 64),
+      ),
+    );
+  }
+}
+
+
+Code 11 Rows
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Home(),
+  ));
+}
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My first app'),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 135, 250, 139),
+      ),
+       body:Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text('Hello'),
+          ElevatedButton(
+            onPressed: (){},
+            child:Text('click'),
+            style:ElevatedButton.styleFrom(primary:Colors.cyanAccent,),
+          ),
+          Container(
+            color:Colors.amber,
+            padding:EdgeInsets.all(50),
+            child: Text('wow'),)
+
+
+       ],),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('click'),
+        backgroundColor: Color.fromARGB(255, 153, 231, 64),
+      ),
+    );
+  }
+}
+
+Code 12 Column
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Home(),
+  ));
+}
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My first app'),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 135, 250, 139),
+      ),
+       body:Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text('Hello'),
+          ElevatedButton(
+            onPressed: (){},
+            child:Text('click'),
+            style:ElevatedButton.styleFrom(primary:Colors.cyanAccent,),
+          ),
+          Container(
+            color:Colors.amber,
+            padding:EdgeInsets.all(50),
+            child: Text('wow'),)
+
+
+       ],),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('click'),
+        backgroundColor: Color.fromARGB(255, 153, 231, 64),
+      ),
+    );
+  }
+}
+

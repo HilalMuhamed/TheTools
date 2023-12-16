@@ -1,0 +1,260 @@
+1 print
+
+console.log(content);
+
+2 varaible 
+
+let or var
+
+3 Arthimatic Expression
+
+same as java
+
+4 user input 
+
+Js
+ 
+document.getElementById("SUBMIT").onclick=function()
+{
+    let a= document.getElementById("A").value;
+    let b = document.getElementById("B").value;
+    let c =a+b;
+    document.getElementById("Sum").innerHTML = "The sum is " ,c;
+}
+or 
+let a =(Number) (window.prompt("Enter the value A: "));
+let b =(Number) (window.prompt("Enter the value of B : "));
+let c = a+b;
+console.log(c);
+
+HTML
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JAVASCRIPT</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+        <i class="fa-solid fa-house"></i>
+        <h1>ENTER A: </h1>
+        <input id="A"></input>
+        <h1>ENTER B: </h1>
+        <input id="B"></input>
+        <button type ="button" id="SUBMIT">submit</button>
+        <h1 id="Sum">The sum is </h1>
+
+        <script src="index.js"></script>
+    </body>
+</html>  
+
+5 type convertion
+
+let a =0;
+let b= String(a);
+let c= Boolean(b);
+let d = Number(b);
+console.log(a,b,c,d);
+
+6 Const
+
+const pi = 3.14;
+
+7 Math
+
+Same as java
+
+8 hypotenus of traingle
+
+Js
+let a,b,c;
+document.getElementById("Submit").onclick=function()
+{
+    a= Number(document.getElementById("A").value);
+    b = Number(document.getElementById("B").value);
+    c = Math.sqrt(a*a+Math.pow(b,2));
+    document.getElementById("C").innerHTML = "The sum is "+c ;
+}
+HTML
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JAVASCRIPT</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+        <i class="fa-solid fa-house"></i>
+        <label for ="A">ENTER A: </label>
+        <input id="A" name="A"><br>
+        <label for="B">ENTER B: </label>
+        <input id="B" name="B"><br>
+        <button type ="button" id="Submit">submit</button><br>
+        <label id="C">The sum is UNKOWN</label><br>
+
+        <script src="index.js"></script>
+    </body>
+</html>
+
+9 Counter Program
+
+JS
+let count=0;
+document.getElementById("increase").onclick=function()
+{
+    count++;
+    document.getElementById("count").innerHTML = count;
+}
+document.getElementById("decrease").onclick=function()
+{
+    count--;
+    document.getElementById("count").innerHTML = count;
+}
+document.getElementById("reset").onclick=function()
+{
+    count=0;
+    document.getElementById("count").innerHTML = count;
+}
+HTML
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JAVASCRIPT</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+        <label id="count" style ="font-size:100px">0</label><br>
+        <button id ="increase">increase</button>
+        <button id="decrease">decrease</button>
+        <button id ="reset">reset</button>
+
+        <script src="index.js"></script>
+    </body>
+</html>  
+
+10 random Number
+
+let x= Math.floor(Math.random()*6)+1;
+console.log(x);
+
+11 String methods
+
+same as java
+
+12 String slicing
+
+let fullName ="Bro Code";
+let firstName;
+let LastName;
+
+firstName = fullName.slice(0,fullName.indexOf(" "));
+LastName = fullName.slice(fullName.indexOf(" ")+1);
+console.log("FUll Name = ",firstName,"\nLAST NAME =",LastName);
+
+
+13 Method chainning
+
+Same as java
+
+14 if statment
+
+Same as java
+
+15 checked property
+
+JS
+document.getElementById("b").onclick=function()
+{
+    if(document.getElementById("myCheckBox").checked){console.log("hello");}
+    else{console.log("You are not welcome");}
+
+
+HTML
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JAVASCRIPT</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <label for="CheckBox">Hello</label>
+        <input type="checkbox" id="myCheckBox">
+        <button id ="b" >submit</button>
+        <script src="index.js"></script>
+    </body>
+</html>  
+
+16 switch
+
+same as java
+
+17 and or not 
+
+same as java
+
+18 while do while for loop breack countine
+
+same as java 
+19 function return statement template literals
+
+let a =10;
+let b=30;
+let c =sum(10,20);
+console.log(`The sum is ${c}`);//template literals
+function sum(a,b)
+{
+    return a+b;
+}
+
+20 ternary operation
+
+same as java
+
+21 var vs let
+
+
+// let = varaible are limited to block to a {} eg :for loop
+// var = varaible are limited to function (){}
+// var is not meant to be used in globally 
+// because it can change browser propertys
+
+23 Currency Format
+
+let myNum = 124545.454;
+myNum = myNum.toLocaleString("hi-In",{style:"currency",currency:"INR"})
+console.log(myNum);
+ 
+
+24 Number guessing Game
+
+js
+const answer = Math.floor((Math.random()*10 +1 ));
+let guesses =0;
+
+document.getElementById("submit").onclick =function(){
+    let guess = document.getElementById("guess").value;
+    guesses +=1;
+    if(guess == answer){alert(answer + " is the Number with " + guesses);}
+    else if (guess<answer){alert("TOO Small");}
+    else{alert("TOO Large");}
+}
+
+HTML
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JAVASCRIPT</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>NUMBER GUESSING GAME </h1>
+        <p>PICK A NUMBER BETWEEN 1 - 10</p>
+        <label for ="guess">Guess the Numebr </label>
+        <input id="guess">
+        <button type ="button" id ="submit">submit</button>
+
+
+    <script src="index.js"></script>
+    </body>
+</html>  
+
+25

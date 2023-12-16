@@ -1,0 +1,419 @@
+JS
+
+
+// Selector
+const todoInput = document.querySelector(".todo-input");
+const todoButton = document.querySelector(".todo-button");
+const todoList = document.querySelector(".todo-list");
+const filterOption = document.querySelector(".filter-todo");
+// Event Listners
+
+document.addEventListener("DOMContentLoaded",getTodos);
+document.addEventListener("DOMContentLoaded",getCompleted);
+
+
+todoButton.addEventListener('click',addTodo);
+
+todoList.addEventListener('click',deleteCheck);
+
+filterOption.addEventListener("click",filterTodo);
+// functions
+
+function addTodo(event)
+{
+    // prvent form form submiting
+    event.preventDefault();
+    
+    //To do Div
+
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add('todo');
+
+    //create li
+    const newTodo = document.createElement("li");
+    newTodo.innerText =todoInput.value;
+    newTodo.classList.add('todo-item');
+    todoDiv.appendChild(newTodo);
+
+    //Add to local storage
+
+    
+    //Check Mark button 
+
+    const completeButton = document.createElement('button');
+    completeButton.innerHTML = '<i class="fa-solid fa-check"></i>';
+    completeButton.classList.add("complete-btn");
+    todoDiv.appendChild(completeButton);
+
+    //Check Trash Button
+
+    const TrashButton= document.createElement('button');
+    TrashButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
+    TrashButton.classList.add("trash-btn");
+    todoDiv.appendChild(TrashButton);
+
+    //Apend to list
+
+    todoList.appendChild(todoDiv);
+    // Clear to Do input value
+    saveLocalTodos(todoInput.value);
+    todoInput.value ="";
+}
+
+function deleteCheck(event)
+{
+    const item= event.target;
+
+    //Delete todo
+
+    if(item.classList[0] === 'trash-btn')
+    {
+        const todo = item.parentElement;
+        //Animation
+        todo.classList.add("fall");
+        removeLocalTodo(todo);
+        removeLocalComp(todo);
+        todo.addEventListener('transitionend',function()
+        {todo.remove();}
+    )}
+    //Check Martk Button
+    if(item.classList[0] === 'complete-btn')
+    {
+        const complete= item.parentElement;
+        if(complete.classList.contains('completed')){removeLocalComp(complete); saveLocalTodos(complete.innerText);}
+        else{Completed(complete.innerText); removeLocalTodo(complete);}
+        complete.classList.toggle('completed');
+    }
+}
+
+function filterTodo(event)
+{
+    const todos=todoList.childNodes;
+    todos.forEach(function(todo)
+    {
+        switch(event.target.value)
+        {
+            case "all":
+                todo.style.display="flex";
+                break;
+            case "completed":
+                if(todo.classList.contains("completed"))
+                {todo.style.display="flex";}
+                else
+                {todo.style.display="none";}
+                break;
+
+            case "uncompleted":
+                if(!(todo.classList.contains("completed")))
+                {todo.style.display="flex";} 
+                else{todo.style.display="none";}
+                break;
+        }
+    });
+}
+function saveLocalTodos(todo)
+{
+    //Check do i already have thing in there
+
+    let todos;
+    if(localStorage.getItem("todos") === null){todos=[]}
+    else{todos =JSON.parse(localStorage.getItem("todos"));}
+    todos.push(todo);
+    localStorage.setItem("todos",JSON.stringify(todos));
+}
+function getTodos()
+{
+    let todos;
+    if(localStorage.getItem("todos") === null){todos=[]}
+    else{todos =JSON.parse(localStorage.getItem("todos"));}
+    todos.forEach(function(todo)
+    {
+           
+    //To do Div
+
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add('todo');
+
+    //create li
+    const newTodo = document.createElement("li");
+    newTodo.innerText =todo;
+    newTodo.classList.add('todo-item');
+
+    todoDiv.appendChild(newTodo);
+    //Check Mark button 
+
+    const completeButton = document.createElement('button');
+    completeButton.innerHTML = '<i class="fa-solid fa-check"></i>';
+    completeButton.classList.add("complete-btn");
+    todoDiv.appendChild(completeButton);
+
+    //Check Trash Button
+
+    const TrashButton= document.createElement('button');
+    TrashButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
+    TrashButton.classList.add("trash-btn");
+    todoDiv.appendChild(TrashButton);
+
+    //Apend to list
+
+    todoList.appendChild(todoDiv);});
+}
+function removeLocalTodo(todo)
+{
+    let todos;
+    if(localStorage.getItem("todos") === null){todos=[]}
+    else{todos =JSON.parse(localStorage.getItem("todos"));}
+    const todoIndex = todo.children[0].innerText;
+    todos.splice(todos.indexOf(todoIndex),1);
+    localStorage.setItem("todos",JSON.stringify(todos));
+}
+function Completed(complete)
+{
+    let comp;
+    if(localStorage.getItem("comp") === null){comp=[]}
+    else{comp =JSON.parse(localStorage.getItem("comp"));}
+    comp.push(complete);
+    localStorage.setItem("comp",JSON.stringify(comp));
+}
+function getCompleted()
+{
+    let comp;
+    if(localStorage.getItem("comp") === null){comp=[]}
+    else{comp =JSON.parse(localStorage.getItem("comp"));}
+    comp.forEach(function(todo)
+    {
+           
+    //To do Div
+
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add('todo');
+
+    //create li
+    const newTodo = document.createElement("li");
+    newTodo.innerText =todo;
+    newTodo.classList.add('todo-item');
+    todoDiv.appendChild(newTodo);
+    //Check Mark button 
+
+    const completeButton = document.createElement('button');
+    completeButton.innerHTML = '<i class="fa-solid fa-check"></i>';
+    completeButton.classList.add("complete-btn");
+    todoDiv.appendChild(completeButton);
+
+    //Check Trash Button
+
+    const TrashButton= document.createElement('button');
+    TrashButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
+    TrashButton.classList.add("trash-btn");
+    todoDiv.appendChild(TrashButton);
+    newTodo.classList.toggle('completed');
+    newTodo.parentElement.classList.toggle('completed');
+    //Apend to list
+
+    todoList.appendChild(todoDiv);});
+}
+function removeLocalComp(complete)
+{
+    let comp;
+    if(localStorage.getItem("comp") === null){comp=[]}
+    else{comp =JSON.parse(localStorage.getItem("comp"));}
+    const todoIndex = complete.children[0].innerText;
+    comp.splice(comp.indexOf(todoIndex),1);
+    localStorage.setItem("comp",JSON.stringify(comp));
+}
+
+
+HTML
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css"><link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bebas+Neue&family=Bungee+Shade&family=Caesar+Dressing&family=Chewy&family=Dancing+Script&family=Edu+QLD+Beginner&family=Faster+One&family=Finger+Paint&family=Fredericka+the+Great&family=Inspiration&family=Lobster&family=Noto+Music&family=Noto+Sans+Anatolian+Hieroglyphs&family=Noto+Sans+Egyptian+Hieroglyphs&family=Noto+Sans+Linear+B&family=Noto+Sans+Meroitic&family=Noto+Sans+Nabataean&family=Press+Start+2P&family=Rubik+80s+Fade&family=Rubik+Glitch&family=Rubik+Marker+Hatch&family=Rubik+Moonrocks&family=Rubik+Pixels&family=Stick&family=Titan+One&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header><h1>The To Do List</h1></header>
+    <form>
+        
+        <input type="text" class="todo-input">
+        <button class="todo-button" type="submit">
+            <i class="fa-solid fa-square-plus"></i>
+        </button>
+        <div class="select">
+        <select name="todos" class="filter-todo">
+            <option value="all">All</option> 
+            <option value="completed">Completed</option>  
+            <option value="uncompleted">Uncompleted</option> 
+        </select>
+    </div>
+
+    </form>
+    <div class="todo-container">
+        <ul class="todo-list"></ul>
+    </div>
+
+
+    <script src="java.js"></script>
+</body>
+</html>
+
+CSS
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body
+{
+    background: linear-gradient(120deg,aqua,rgb(42, 125, 250));
+    color:white;
+    font-family: "Amatic SC";
+    min-height: 100vh;
+}
+header
+{
+    font-size: 4rem;
+    transition:all 0.2s ease;
+}
+header:hover
+{
+    font-size:5rem;
+}
+.filter-todo
+{
+    border-radius:3px;
+}
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input,form button
+{
+    padding:0.5rem;
+    font-size: 2rem;
+    font-family:"Ink Free";
+    border:none;
+    background: white;
+}
+form button
+{
+    font-size: 2rem;
+    color:rgb(77, 166, 250);
+    background:white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover
+{
+    background: rgb(77, 166, 250);
+    color:white;
+}
+
+.todo-container
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list
+{
+    min-width: 30%;
+    list-style: none;
+}
+.todo
+{
+    margin:0.5rem;
+    background: white;
+    color:black;
+    font-size:1.5rem;
+    font-weight:bold;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    transition:all 0.5s ease;
+}
+.todo li
+{
+    flex:1;
+}
+.trash-btn,.complete-btn
+{
+    background: rgb(253, 80, 80);
+    color:white;
+    border:none;
+    padding:1rem;
+    cursor:pointer;
+    font-size:1rem;
+}
+.complete-btn
+{
+    background: rgb(80, 253, 80);
+}
+.todo-item
+{
+    padding :0rem 0.5rem;
+}
+.fa-trash,.fa-check
+{
+    pointer-events: none;
+}
+.completed
+{
+    text-decoration:line-through;
+    opacity:0.5;
+}
+.fall
+{
+    transform: translateY(8rem) rotate(20deg);
+    opacity:0;
+}
+select
+{
+    
+    outline:none;
+    border:none;
+}
+.select
+{
+    margin:1rem;
+    position: relative;
+    overflow:hidden;
+}
+select
+{
+    color:rgb(77, 166, 250);
+    width:10rem;
+    cursor: pointer;
+    padding:1rem;
+    
+}
+.select::after
+{
+    content: "\25BC";
+    position:absolute;
+    background: white;
+    color:rgb(77, 166, 250);
+    top:0;
+    right:0;
+    padding:1rem;
+    pointer-events: none;
+}
+
+.select:hover::after
+{
+    color:white;
+    background: rgb(77, 166, 250);
+    
+}

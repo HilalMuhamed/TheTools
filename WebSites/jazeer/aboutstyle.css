@@ -1,0 +1,136 @@
+
+html
+{
+    background-image: linear-gradient(to bottom, white, rgb(219, 219, 219));
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-image: linear-gradient(to right, #333, #1a1a1a);
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+nav
+{
+    margin:1px;
+    color: #fff;
+    
+}
+nav ul
+{
+    list-style-type:none;
+    display:flex;
+    gap:40px;
+    margin:0;
+}
+header a
+{
+    text-decoration:none;
+    color:white;
+    text-transform:uppercase;
+    font-family: 'Poppins';
+    font-size:20px;
+    position:relative;
+    
+}
+header nav li a:hover
+{
+    border-bottom:2px solid rgb(56, 56, 56);
+    text-shadow: 0px 0px 10px white;
+}
+#about{
+    border-bottom:2px solid rgb(150,150,150);
+}
+#logo
+{
+    font-size:50px;
+    text-shadow: 0px 0px 5px white;
+}
+
+h2{
+
+    font-family: 'Inspiration';
+    font-size:80px;
+    font-weight:bold;
+    transition: transform text-decoration 0.3s ease-in-out;
+}
+main {
+    font-size:20px;
+    font-family:'Playfair Display';
+    font-weight:normal;
+    margin: 130px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: center;
+
+    
+}
+
+h2:hover
+{
+    transform: scale(1.04);
+}
+
+.theimage
+{
+    border-radius: 50%;
+    width:200px;
+    display: flex;
+    margin: auto;
+    transition: transform 0.3s ease-in-out;
+}
+.theimage:hover {
+    transform: scale(1.1);
+  }
+#name
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+.overlay
+{
+    position:absolute;
+    z-index: 999;
+    background: white;
+    margin:auto;
+    width: 100%;
+    height: 100%;
+    animation: reveal 1.5s ease-in  forwards;
+    transform-origin:bottom;
+}
+@keyframes reveal
+{
+    from{transform:scaleY(1);}
+    to{transform:scaleY(0);}
+}
+main
+{
+    animation:growIn 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    transform: scale(.2);
+}
+@keyframes growIn
+{
+    to{transform:scale(1);}
+}
+

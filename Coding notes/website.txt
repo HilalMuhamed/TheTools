@@ -1,0 +1,1094 @@
+1 Basics
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>The website</title>
+
+    </head>
+
+    <body>
+        <!-- This is a comment -->
+        Welcome to my website
+        <h1>hello</h1>
+        <hr> <!--vertical line-->
+        <p>why what is &nbsp &nbsp &nbsp <!--add space--> going on </p><p>in the website</p>
+        <br> <!--space-->
+        <h6>hi</h6>
+        
+    </body>
+
+</html>
+
+2 Text formating
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Text Formating</title>
+
+    </head>
+
+    <body>
+        <center>
+        This is normal text<br><br>
+        <b>This is bold text </b><br><br>
+        <i>This is italic text</i><br><br>
+        This is <sub>subsribt</sub> text <br><br>
+        This is <sup>superscript</sup>text <br><br>
+        <small >This is small text </small><br><br>
+        <big >This is big text</big> <br><br>
+        <ins>This inserted text </ins><!--Under line--><br><br>
+        <del>This is delted text</del><br><br>
+        <mark>This is marked text</mark><br><br>
+        </center>
+    </body>
+
+</html>
+
+3 Lists
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Lists</title>
+
+    </head>
+
+    <body>
+        <ul>
+            <li>pizza</li>
+            <li>burger</li>
+            <li>sandwitch</li>
+        </ul>
+        <ul style ="list-style: circle;">
+            <li>pizza</li>
+            <li>burger</li>
+            <li>sandwitch</li>
+        </ul>
+        <ol>
+            <li>pizza</li>
+            <li>burger</li>
+            <li>sandwitch</li>
+        </ol>
+        <ol type ="a">
+            <li>pizza</li>
+            <li>burger</li>
+            <li>sandwitch</li>
+        </ol>
+        <ol type ="a" start ="2">
+            <li>pizza</li>
+            <li>burger</li>
+            <li>sandwitch</li>
+        </ol>
+        <dl type ="a">
+            <dt>pizza</dt>
+            <dd>cheese</dd>
+            <dt>burger</dt>
+            <dd>chiken</dd>
+            <dt>sandwitch</dt>
+            <dd>veg</dd>
+        </dl>
+    
+    </body>
+
+    
+</html>
+
+4 Table
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Table</title>
+
+    </head>
+
+    <body>
+       <table border = 2px bgcolor="black"  height =50 width = 100%>
+        <tr bgcolor="orange">
+            <th> Programming java </th>
+            <th> javascript </th>
+            <th> java </th>
+            <th> python</th>
+        </tr>
+        <tr bgcolor="powder-blue" align="center">
+                <th> more languages </th>
+                <td> c </td>
+                <td> c++ </td>
+                <td> php </td>
+        </tr>
+        <tr bgcolor ="violet"> 
+            <th> Even more languages </th>
+            <td> ruby </td>
+            <td> c# </td>
+            <td> swift </td>
+        </tr>
+        <tr bgcolor ="red"> 
+            <th> dont know more languages </th>
+            <td> english </td>
+            <td> malayalam </td>
+            <td> hindi </td>
+        </tr>
+
+       </table>
+    </body>
+
+    
+</html>
+
+5 Audio
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Audio</title>
+
+    </head>
+
+    <body>
+
+        <audio controls src = "Dnj Music - Pixel Music  No Copyright Music  Free.mp3" loop muted autoplay>
+            your browser doesnt support audio
+        </audio>
+
+    </body>
+
+    
+</html>
+
+6 Video
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Video</title>
+
+    </head>
+
+    <body>
+
+       <video height="250px" width="20%" controls loop muted autoplay>
+        <source src ="Enter the source here">
+        Not working for some reason
+       </video>
+
+    </body>
+
+    
+</html>
+
+7 Buttons
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Buttons</title>
+
+    </head>
+
+    <body>
+
+       <button name="button" type="button">
+        Dont click
+       </button>
+       <button name="Submit-button" type="submit" value ="Submit">
+        Submit
+       </button>
+       <button name="Reset-button" type="reset" value ="Reset">
+        Reset
+       </button>
+       <button disabled>Disabled</button>
+       <button autofocus>Autofocus</button>
+       <button onclick="alert('Alert is activated')">Alert</button>
+       <a href="https://www.youtube.com/"><button>YouTube</button></a>
+
+       <br>
+       <br>
+       <button style="background-color: deepskyblue; color:crimson; font: size 10px;font-family:Cambria;">CSS BUTTON</button>
+    </body>
+
+    
+</html>
+
+8 Forms
+
+    <!DOCTYPE html>
+    <html>
+        
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        <form action="DosSomething.txt">
+            <label for ="FirstName">First Name : </label>
+            <input type="text" id ="FirstName"name="FirstName">
+            <br><br>
+            <label for ="LastName">Last Name : </label>
+            <input type="text" id ="LastName"name="LastName"placeholder="Enter some name">
+            <br><br>
+            <input type="reset">
+            <input type="submit">
+            <br><br>
+            <label for="pizza" >Pizza</label>
+            <input type="radio"value="pizza" id="pizza" name="title">
+            <label for="burger" >Burger</label>
+            <br>
+            <input type="radio"value="burger" id="burger" name="title">
+            <select>
+                <option value ="pizza">pizza</option>
+                <option value ="pizza">burger</option>
+            </select>
+            <br><br>
+            Email
+            <input type="email" placeholder="Enter an email">
+            <br><br>
+            Date
+            <input type ="date">
+            <br><br>
+            NUMBER
+            <input type="number"min="0" max="10"><br><br>
+            PhNumber
+            <input type="tel"><br><br>
+            Password
+            <input type="password"maxlength="12"><br><br>
+            Silder
+            1<input type="range" step="25">5<br><br>
+            <br>
+            Check Box
+            <input type="checkbox">
+            File 
+            <input type="file" accept=".txt">
+        </form>
+    </body>
+    </html>
+
+9 Meta data
+
+
+    <!DOCTYPE html>
+    <html>
+        
+    <head>
+        <title>Meta website</title>
+        <!--add meta tage in the head area , for some website functions-->
+        <meta charset="UTF-8">
+        <meta name = "keywords" content="website,tutorail">
+        <meta name ="description" content="website testing">
+        <meta name ="author" content="The Coder">
+        <meta name="viewport" content ="width=device-width,intail-scale=1.0"><!--for moblie device-->
+        <meta http-equiv="refresh" content="5"><!--refresh in every 5 seconds-->
+    </head>
+    <body>
+    </body>
+    </html>
+    
+10 color 
+
+    <!DOCTYPE html>
+    <html>
+        
+    <head>
+        <title>Color</title>
+
+    </head>
+    <body style="background-color:#ffecd1">
+        <h1 style="color:#252422; background-color:#fffcf2;">SOME COLORS</h1>
+        <p style="color:#00a6fb;background-color:#ccc5b9;">
+            In the Second Age of Middle-earth,
+            the lords of Elves, Dwarves,
+            and Men are given Rings of Power. 
+            Unbeknownst to them, 
+            the Dark Lord Sauron forges the One Ring in Mount Doom, 
+            instilling into it a great part of his power, 
+            to dominate the other Rings to conquer Middle-earth.
+        </p>
+        <p style=" color:#16db65;background-color:#403d39 ;">
+            A final alliance of Men and Elves battles Sauron's forces in Mordor. 
+            Isildur of Gondor severs Sauron's finger and the Ring with it, 
+            thereby vanquishing Sauron and returning him to spirit form.
+            With Sauron's first defeat, the Third Age of Middle-earth begins. 
+            The Ring's influence corrupts Isildur, 
+            who takes it for himself and is later killed by Orcs.
+        </p>
+        <p style="color:#eb5e28 ;background-color:#252422;">
+            The Ring is lost in a river for 2,500 years until it is found by Gollum, 
+            who owns it for over four and a half centuries. 
+            The ring abandons Gollum and it is subsequently found by a hobbit named Bilbo Baggins, 
+            who is unaware of its history.
+        </p>
+    </body>
+    </html>
+11 span and div
+
+
+    <!DOCTYPE html>
+    <html>
+        
+    <head>
+        <title>Color</title>
+
+    </head>
+    <body >
+        <h1>Span tag</h1>
+        <p style="color:#00a6fb;">
+            In the Second Age of Middle-earth,
+            the lords of Elves, Dwarves,
+            and Men are given Rings of Power. 
+            Unbeknownst to them,
+            <span style="color:red">why is this sentence red</span> 
+            the Dark Lord Sauron forges the One Ring in Mount Doom, 
+            instilling into it a great part of his power, 
+            to dominate the other Rings to conquer Middle-earth.
+        </p>
+        <h1>Dive tag</h1>
+        <p style=" color:#16db65;">
+            A final alliance of Men and Elves battles Sauron's forces in Mordor. 
+            Isildur of Gondor severs Sauron's finger and the Ring with it,
+            <div style="color:blue">Why is this blue</div> 
+            thereby vanquishing Sauron and returning him to spirit form.
+            With Sauron's first defeat, the Third Age of Middle-earth begins. 
+            The Ring's influence corrupts Isildur, 
+            who takes it for himself and is later killed by Orcs.
+        </p>
+        </p>
+        
+     
+    </body>
+    </html>
+
+12 Css Basic
+
+HTML
+
+    <!DOCTYPE html>
+    <html>
+        
+    <head>
+        <title>Website</title>
+        <style>
+            h1
+            {
+                background-color: crimson;
+            }
+            #id1
+            {
+                background-color: gold;
+            }
+            .class1
+            {
+                background-color:royalblue;
+            }
+            h1.class2
+            {
+                background-color: violet;
+            }
+            h3,h4
+            {
+                background-color: indianred;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css"href="style.css">
+    </head>
+    <body>
+        <h1 style="background-color:aquamarine">Hello this is inline</h1>
+        <h1>Hello this Internal </h1>
+        <h1 id="id1">Hello this is Internal using id </h1>
+        <h1 class="class1">Hello this is Internal using class </h1>
+        <h1 class="class2">Hello this is Internal using class for only 1 tag</h1>
+        <h3>Hello this Internal have same style as h4</h3>
+        <h4>Hello this Internal have same style as h3</h4>
+        <h2>Hello this is external</h2>
+    </body>
+    </html>
+    
+
+CSS
+
+h2
+{
+    background-color: bisque;
+}
+
+13 Fonts 
+
+HTML
+
+    <!DOCTYPE html>
+    <html>
+        
+    <head>
+        <title>Fonts css</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Caesar+Dressing&family=Chewy&family=Dancing+Script&family=Edu+QLD+Beginner&family=Finger+Paint&family=Press+Start+2P&family=Rubik+Moonrocks&family=Titan+One&display=swap" rel="stylesheet">"
+    </head>
+    <body>
+        <p>
+            In the Second Age of Middle-earth,
+            the lords of Elves, Dwarves,
+            and Men are given Rings of Power. 
+            Unbeknownst to them, 
+            the Dark Lord Sauron forges the One Ring in Mount Doom, 
+            instilling into it a great part of his power, 
+            to dominate the other Rings to conquer Middle-earth.
+        </p>
+        <h1>ONE RING TO RULE THEM ALL</h1>
+    </body>
+
+CSS
+
+body{background-color:royalblue;}
+p
+{
+    font-family:"ink Free","MV Boli", monospace;
+    font-size: large;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: normal;
+    color:crimson;
+    
+
+}
+h1{
+    font-family: "Finger Paint";
+    color :orange;
+}
+
+14 Border
+
+HTML
+
+    <!DOCTYPE html>
+    <html>
+        
+    <head>
+        <title>Borders css</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Caesar+Dressing&family=Chewy&family=Dancing+Script&family=Edu+QLD+Beginner&family=Finger+Paint&family=Press+Start+2P&family=Rubik+Moonrocks&family=Titan+One&display=swap" rel="stylesheet">"
+    </head>
+    <body>
+        <p>
+            In the Second Age of Middle-earth,
+            the lords of Elves, Dwarves,
+            and Men are given Rings of Power. 
+            Unbeknownst to them, 
+            the Dark Lord Sauron forges the One Ring in Mount Doom, 
+            instilling into it a great part of his power, 
+            to dominate the other Rings to conquer Middle-earth.
+        </p>
+        <h1>ONE RING TO RULE THEM ALL</h1>
+    </body>
+    </html>
+CSS    
+
+p{
+    padding: 10px;
+    border-style: solid;
+    border-style: unset;
+    border-style: hidden;
+    border-style: inherit;
+    border-style: groove;
+    border-style: inset;
+    border-style: double;
+    border-style: dashed;
+    border-style: outset;
+    border-width: 5px 10px 20px 8px;
+    border-color: aquamarine;
+    border-radius: 15px;
+
+}
+h1{
+    border-bottom-style: groove;
+    border-top-style:dotted;
+    border-left-style: outset;
+    border-right-style: dashed;
+    border-top-color: crimson;
+    border-bottom-color: #00ff00;
+}
+
+15 Background
+
+HTML
+
+    <!DOCTYPE html>
+    <html>
+        
+    <head>
+        <title>BackGround css</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Caesar+Dressing&family=Chewy&family=Dancing+Script&family=Edu+QLD+Beginner&family=Finger+Paint&family=Press+Start+2P&family=Rubik+Moonrocks&family=Titan+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>UNDERTALE</h1>
+        <div id="UndertaleLore">
+        <p>Undertale is set in the Underground, a realm where monsters were banished after war broke out with humans. The Underground is sealed from the surface by a magic barrier with a singular gap at Mount Ebott.[14] In the year 201X, a human child falls into the Underground from Mount Ebott and encounters Flowey, a sentient flower who teaches the player the game's mechanics and encourages them to raise their "LV", or "LOVE", by gaining "EXP" through killing monsters.[d] When Flowey attempts to kill the human, the human is rescued by Toriel, a motherly goat-like monster, who teaches them how to survive conflict in the Underground without killing. She intends to adopt the human, wanting to protect them from Asgore, the king of the Underground.</p>
+        <p>Undertale is set in the Underground, a realm where monsters were banished after war broke out with humans. The Underground is sealed from the surface by a magic barrier with a singular gap at Mount Ebott.[14] In the year 201X, a human child falls into the Underground from Mount Ebott and encounters Flowey, a sentient flower who teaches the player the game's mechanics and encourages them to raise their "LV", or "LOVE", by gaining "EXP" through killing monsters.[d] When Flowey attempts to kill the human, the human is rescued by Toriel, a motherly goat-like monster, who teaches them how to survive conflict in the Underground without killing. She intends to adopt the human, wanting to protect them from Asgore, the king of the Underground.</p>
+    </div>
+    </body>
+    </html>
+
+CSS
+html
+{
+    /*background-color:rgb(130,47,220) ;
+    background: linear-gradient(pink,crimson);
+    background-repeat:not-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;*/
+    color:white;
+    background-image: url("tobyFoxUndertale.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment:fixed;
+}
+h1{
+    background: linear-gradient(to right, orange,crimson);
+}
+p{
+    background: linear-gradient(to right, green,powderblue);
+}
+#UndertaleLore{
+    background: linear-gradient(to right, green,powderblue);
+}
+
+16 Margins
+
+HTML
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>THE HEADING</h1>
+        <p id="p1">In the Second Age of Middle-earth,
+            the lords of Elves, Dwarves,
+            and Men are given Rings of Power. 
+            Unbeknownst to them, 
+            the Dark Lord Sauron forges the One Ring in Mount Doom, 
+            instilling into it a great part of his power, 
+            to dominate the other Rings to conquer Middle-earth.
+        </p>
+        <p id="p2">
+            In the Second Age of Middle-earth,
+            the lords of Elves, Dwarves,
+            and Men are given Rings of Power. 
+            Unbeknownst to them, 
+            the Dark Lord Sauron forges the One Ring in Mount Doom, 
+            instilling into it a great part of his power, 
+            to dominate the other Rings to conquer Middle-earth.
+        </p>
+        <p id="p3">
+            In the Second Age of Middle-earth,
+            the lords of Elves, Dwarves,
+            and Men are given Rings of Power. 
+            Unbeknownst to them, 
+            the Dark Lord Sauron forges the One Ring in Mount Doom, 
+            instilling into it a great part of his power, 
+            to dominate the other Rings to conquer Middle-earth.
+        </p>
+        <p id="p4">
+            In the Second Age of Middle-earth,
+            the lords of Elves, Dwarves,
+            and Men are given Rings of Power. 
+            Unbeknownst to them, 
+            the Dark Lord Sauron forges the One Ring in Mount Doom, 
+            instilling into it a great part of his power, 
+            to dominate the other Rings to conquer Middle-earth.
+        </p>
+    </body>
+</html>  
+
+
+CSS
+
+html
+{
+    margin-top:-20px;
+    margin-left:-5px
+}
+h1
+{
+    border:1px solid;
+    width:300px;
+}
+p{
+    border:2px solid;
+    width:250px;
+    padding:25px;
+    margin:25px
+}
+#p2
+{
+    margin:50px 50px 50px 50px;
+}
+#p3
+{
+    margin:20%;
+}
+#p4
+{
+    margin:auto;
+}
+
+17 Shadow
+
+HTML
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>THE HEADING</h1>
+    </body>
+</html>  
+
+CSS
+
+h1
+{
+    border:1px solid;
+    width:200px;
+    padding :25px;
+    color:aquamarine;
+    background-color: azure;
+    border-color: cornflowerblue;
+
+    text-shadow:-2px -2px 5px rgb(220, 50, 20),3px 3px 6px rgb(20, 180, 220);;
+    box-shadow:10px 10px 10px rgb(32, 218, 147);
+    /*
+    horizontal(px)
+    vertical(px)
+    blur (px)
+    color(name,rgb,hex)
+    */
+}
+
+18 psuedo classes
+
+HTML
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>THE HEADING</h1>
+
+        <a href="https:monkeytype.com">MonkeyType</a><br>
+        <button type="button">click me</button>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li>item 5</li>
+        </ul>
+    </body>
+</html>  
+
+CSS
+
+a:link
+{
+    color:rgba(255, 80, 80, 0.467);
+}
+a:visited
+{
+    color:rgb(30, 255, 30);
+}
+button:hover
+{
+    background-color:rgb(255, 109, 36);
+    color:white;
+}
+button:active
+{
+    background-color: aqua;
+}
+li:first-child
+{
+    background-color: coral;
+}
+li:last-child
+{
+    background-color: rgb(115, 255, 0);
+}
+li:nth-child(3)
+{
+    background-color: deeppink;
+}
+li:nth-child(odd)
+{
+    color: rgb(43, 20, 255);
+}
+/* li:nth-child(3n+0)
+{
+    nth child(an+b)
+    a= cycle size
+    n = countrer (starts at o
+    b =offset value
+    color: rgb(231, 255, 20);} 
+}
+
+19 Positioning
+
+HTML
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <p id="p1">LEFT</p>
+        <p id="p2">Center</p>
+        <p id="p3">Right</p>
+
+        <img src="tobyFoxUndertale.jpg" style="width:150px; height:150px;"></img>
+        <div>
+        <p>Undertale is a 2015 2D role-playing video game created by American indie developer Toby Fox. The player controls a child who has fallen into the Underground: a large, secluded region under the surface of the Earth, separated by a magical barrier. </p>
+        <p>Undertale is a 2015 2D role-playing video game created by American indie developer Toby Fox. The player controls a child who has fallen into the Underground: a large, secluded region under the surface of the Earth, separated by a magical barrier. </p>
+        <p>Undertale is a 2015 2D role-playing video game created by American indie developer Toby Fox. The player controls a child who has fallen into the Underground: a large, secluded region under the surface of the Earth, separated by a magical barrier. </p>
+        <p>Undertale is a 2015 2D role-playing video game created by American indie developer Toby Fox. The player controls a child who has fallen into the Underground: a large, secluded region under the surface of the Earth, separated by a magical barrier. </p>
+    </div>
+    <h1>FIXED POSITIONING</h1>
+    <h2>Relative POSITIONING</h2>
+    <p>Undertale is a 2015 2D role-playing video game created by American indie developer Toby Fox. The player controls a child who has fallen into the Underground: a large, secluded region under the surface of the Earth, separated by a magical barrier.</p>
+    <h3>STICKY POSITIONING</h3>
+    <h4>STATIC POSITIONING(NORMAL)</h4>
+
+    <h5>ABSOLUTE POSITIONING</h5>
+    <div id="box1">
+        This is relative
+        <div id="box2">This is absolute</div>
+    </div>
+    
+</body>
+</html>  
+CSS                                                                    
+
+/*Text alignment*/
+#p1
+{
+    text-align: left;
+}
+#p2
+{
+    text-align: center;
+}
+#p3
+{
+    text-align: right;
+}
+p
+{
+    border:1px solid;
+    width:250px;
+}
+/*float propery*/
+img
+{
+ float:left;
+ margin:5px;  
+}
+div
+{
+    border :1px solid;
+    width:300px;
+}
+/*position property*/
+h1
+{
+    border:1px solid;
+    background-color: yellow;
+    width:200px;
+    position:fixed;
+    bottom: 50px;
+    left:50px;
+
+}
+h2
+{
+    border:1px solid;
+    background-color: greenyellow;
+    width:200px;
+    position: relative;
+    top:50px;
+    left:50px;
+}
+h3/*not working check again */
+{
+    border:1px solid;
+    background-color:dodgerblue;
+    width:200px;
+    position: sticky;
+    right: 100px;
+}
+h4
+{
+    border:1px solid;
+    background-color:rgb(30, 255, 161);
+    width:200px;
+    position: static;
+}
+#box1
+{
+    position: relative;
+    background-color:rgb(63, 63, 63);
+    width:200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+#box2
+{
+    position:absolute;
+    background-color:darkgrey;
+    width: 100px;
+    height: 100px;
+    top:50px;
+    left:50px;
+}
+
+20 Transformation
+
+HTML
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body> 
+        <p id="p1">This is before tranformation</p>
+        <p id="p2">This is after tranformation</p>
+    </body>
+</html>  
+
+CSS                                                                                                                                              p
+{
+    width:100px;
+    background: red;
+    font-size: 50px;
+    text-align:center;
+}
+#p2
+{
+    transform: translateX(100px);
+    transform: translateY(500px);
+    transform:translate(50px,50px);
+    transform: rotateX(180deg);
+    transform:rotateY(200deg);
+    transform:rotateZ(100deg);
+    transform:rotate(200deg);
+    transform:scaleX(2);
+    transform:scaleY(0.5);
+    transform:scale(2,0.5);
+    transform:skewX(45deg);
+    transform:skewY(45deg);
+    transform:skew(45deg,120deg);
+    /*transform: matrix(0,0,0,0,0,0); 
+    ScaleX
+    skewY
+    skewX
+    scaleY
+    translateX
+    translateY*/
+
+
+}
+
+21 Animation
+
+Html
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body> 
+
+        <center><p id="p1">ANIMATED</p></center>
+    </body>
+</html>  
+
+
+CSS                                                                                                                                              #p1
+{
+    width:300px;
+    background:linear-gradient(to right,#A9D9D0,#038C7F);
+    font-size: 50px;
+    text-align:center;
+ 
+}
+#p1:hover
+{
+    animation: colorBakcground,colorFont,Rotation,Moving,Opacity 2s;
+    animation-duration :5s;
+    animation-iteration-count:infinite;  
+}
+@keyframes colorBackground
+{
+    from{background:linear-gradient(to right,#A9D9D0,#038C7F);}
+    to{background:linear-gradient(to right,#038C7F,#A9D9D0);}
+}
+@keyframes colorFont{
+    0%{color:crimson;}
+    20%{color:yellow;}
+    40%{color:green;}
+    60%{color:coral;}
+    80%{color:royalblue;}
+    100%{color:tomato;}
+}
+@keyframes Rotation
+{
+    100%{transform:rotateX(360deg);}
+}
+@keyframes Moving
+{
+    100%{transform:translate(100px,50px);}
+}
+@keyframes Opacity{
+    0%{opacity:0}
+    50%{opacity:1}
+    100%{opacity:0};
+}
+@keyframes myScale{
+    50%{transform:scale(0.5,2);}
+}                                                                                                                                              
+20 Navigation bar
+
+HTMl
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navigation Bar</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body> 
+        <h1>NAVIGATION BAR</h1>
+        <ul>
+            <li><a href="https://www.google.com">HOME</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Service</a></li>
+            <li><a href="">Contact US</a></li>
+        </ul>
+    </body>
+</html>  
+
+
+CSS                                                                     ul
+ul{
+    list-style-type:none;/*to remove bullet points*/
+    padding:0px;
+    margin:0px;
+    overflow:hidden;
+    background-color:rgb(40,40,40);
+}
+
+ul a
+{
+    float :left;
+    display:block;
+    color:white;
+    padding:10px 50px;
+    text-align:center;
+    text-decoration: none;
+    border-right:1px solid black;
+    min-width: 60px;
+
+}
+li a:hover
+{
+    background-color: rgb(20,20,20);
+    animation :glow 2s infinite;
+}
+@keyframes glow
+{
+    50%{text-shadow: 0px 0px 10px white;}
+}
+
+22 FLEX BOX 
+
+HTML
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flex BOX</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body> 
+
+        <h1>FLEX BOX DEMO</h1>
+        <div class="container">
+            <div>#1</div>
+            <div>#2</div>
+            <div>#3</div>
+            <div>#4</div>
+            <div>#5</div>
+            <div>#1</div>
+            <div>#2</div>
+            <div>#3</div>
+            <div>#4</div>
+            <div>#5</div>
+        </div>
+    </body>
+</html>  
+CSS
+                                                                     .container div{
+    color:white;
+    height:100px;
+    width:100px;
+    background-color: rgb(30,30,30);
+    text-align: center;
+    line-height: 100px;
+    font-size:50px;
+    margin:5px;
+    
+
+}
+
+.container
+{
+    display:flex;
+    flex-wrap:wrap;
+    background-color: rgb(100,100,100);
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+
+    /* justify-content: start;
+    justify-content: end;
+    justify-content: space-around;
+    flex-direction: column;
+    width:110px; */
+}
+
+23 Icons
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

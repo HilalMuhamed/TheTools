@@ -1,0 +1,507 @@
+Code 1 print
+
+    printf("Hello");
+    int a;
+    a = 10;
+    printf("\t %d \n",a);
+
+Code 2 scan
+
+    int a , b;
+    printf("Enter the 2 number : ");
+    scanf("%d %d",&a,&b);
+    printf("The sum is %d ",a+b);            
+    
+Code 3 sum
+
+    float a , b ,c;
+    printf("Enter the 3 number : ");
+    scanf("%f%f%f",&a,&b,&c);
+    printf("The sum is %f ",(a+b+c)/3);            
+    
+Code 4 swap
+
+    int a ,b, temp;
+    printf("Enter the value a : ");
+    scanf("%d",&a);
+    printf("Enter the value b : ");
+    scanf("%d",&b);
+    temp = a;
+    a = b;
+    b = temp;
+    printf("%d is a and %d is b",a,b);
+
+Code 5 If
+
+    int a ,b;
+    printf("Enter the value a : ");
+    scanf("%d",&a);
+    
+    if (a < 0){
+        printf("It is negative");
+    }
+    else if(a == 0){
+        printf("It is 0");
+    }
+    else
+    printf("It is positive");
+
+Code 6 nested IF
+
+    int a ,b,c;
+    printf("Enter the value a : ");
+    scanf("%d",&a);
+    printf("Enter the value b : ");
+    scanf("%d",&b);
+    printf("Enter the value c : ");
+    scanf("%d",&c);
+    
+    if (a > b )
+    {
+        if(a > c){
+        printf("%d is the largest ",a);
+    }
+    else if(b > c)
+    {
+        printf("%d is the largest ",b);
+    }
+    else
+    printf("%d is the largest ",c);
+}
+
+Code 7 Switch
+
+    int a;
+    printf("Enter the value 0 or 1 : ");
+    scanf("%d",&a);
+    switch(a)
+    {
+        case 1 :
+        printf("The number is 1");
+        break;
+        case 0:
+        printf("The number is 0");
+        break;
+        default:
+        printf("Tha is not 0 or 1");
+    }
+
+Code 8 For loop
+
+    for (int i = 0; i <=100 ;i++)
+    {
+        printf("%d\n",i);
+    }
+
+Code 9 While loop
+
+    int i = 0;
+    while(i<=100){
+        printf("%d\n",i);
+        i++;
+    }
+
+Code 10 do while loop
+
+    int i = 0;
+    do{
+        printf("%d\n",i);
+        i++;
+    }while(i<=100);
+
+Code 11 Sum of n numbers
+
+int n;
+int i =0;
+int sum =0;
+printf("Enter the limit: ");
+scanf("%d",&n);
+while(i <= n){
+    sum = sum +i;
+    i++;
+}
+printf("The sum is %d ",sum);
+
+Code 12 Even Number
+
+int n =0;
+int i =2;
+printf("Enter the limit: ");
+scanf("%d",&n);
+while(i <= n)
+{
+    if(i%2 == 0){
+    printf("%d is an even Number\n",i);
+    }
+    i++;
+}
+
+Code 13 Prime Number 
+
+#include <stdio.h>
+
+int main() 
+{
+int n =0;
+int i =0;
+int flag = 0;
+printf("Enter the limit: ");
+scanf("%d",&n);
+for(i = 2;i<=n/2;i++)
+{
+    if(n%i == 0){
+        flag = 1;
+        break;
+    }
+}
+if(flag == 1){
+    printf("%d is prime",n);
+}
+else
+printf("%d is not prime",n);
+}
+
+Code 14 Nested loops
+
+
+int n = 0;
+int i = 0;
+int j = 0;
+printf("Enter the limit: ");
+scanf("%d",&n);
+for(i = 0;i<=n;i++)
+{
+    for(j=0;j<=i;j++){
+        printf("*\t");
+    }
+    printf("\n");
+}
+
+
+
+Code 14 break continue
+
+int n = 0;
+int i = 0;
+printf("Enter the limit: ");
+scanf("%d",&n);
+for(i = 0;i<=n;i++)
+{
+    if(i == 5){
+        continue;
+    }
+    printf("%d\n",i);
+    if(i == 10){
+        break;
+    }
+}
+
+Code 15 Array  
+
+    int a[5];
+    int i;
+    
+    a[0] = 25;
+    for ( i =1;i<5;i++){
+        a[i]=i;
+    }
+    printf("Array 1 \n");
+    for ( i =0;i<5;i++){
+        printf("%d\n",a[i]);
+    }
+    
+    int b[5] = {34,53,15,62,5};
+    printf("Array 2 \n");
+        for ( i =0;i<5;i++){
+        printf("%d\n",b[i]);
+    }
+    int n;
+    int c[100];
+    printf("Enter the number of element :");
+    scanf("%d",&n);
+    printf("Enter the Elment of Array: ");
+    for ( i =0;i<n;i++){
+        scanf("%d",&c[i]);
+    }
+    printf("The elemnts are ");
+        for ( i =0;i<n;i++){
+        printf("%d\t",c[i]);
+    }
+
+Code 16 Sum of array
+
+    int i;
+    int n;
+    int sum =0;
+    int a[100];
+    printf("Enter the number of element :");
+    scanf("%d",&n);
+    printf("Enter the Elment of Array: ");
+    for ( i =0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+        for ( i =0;i<n;i++){
+            sum = sum +a [i];
+    }
+    printf("%d is the sum ",sum);
+
+Code 17 Find a element
+
+    int i;
+    int n;
+    int b;
+    int index;
+    int flag =0;
+    int a[100];
+    printf("Enter the number of element :");
+    scanf("%d",&n);
+    printf("Enter the Elment of Array: ");
+    for ( i =0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    printf("Enter the number to check: ");
+    scanf("%d",&b);
+    for ( i =0;i<n;i++){
+        if(a[i] == b){
+            index = i;
+            flag =1;
+            break;
+        }
+    }
+    if(flag == 1){
+        printf("%d is the position of number ",index +1);}
+        else{
+            printf("Elemnt do not exsit");
+        }
+
+
+Code 18 Sorting
+
+
+    int i,j,n;
+    printf("Enter the Number of Elements : ");
+    scanf("%d",&n);
+    int a[n];
+    printf("Enter the Elements : ");
+    for(i=0;i<n;i++){
+        printf("Enter the elemnts %d : ",i+1);
+        scanf("%d",&a[i]);
+    }
+    printf("\nBefore sorting: \n");
+    for(i=0;i<n;i++){
+        printf("%d\t",a[i]);
+    }
+    for(i=0;i<n-1;i++){
+        for(j=0;j<n-1-i;j++){
+            if(a[j] > a[j+1]){
+                int temp = a[j];
+                a[j] = a[j+1];
+                a[j+1] = temp;
+            }
+        }
+    }
+    printf("\nAfter sorting: \n");
+    for(i=0;i<n;i++){
+        printf("%d\t",a[i]);
+    }
+
+
+Code 19 String 
+
+    
+    char name1[10];
+    printf("Enter the name : ");
+    scanf("%s",name1);
+    printf("%s\n",name1);
+    
+    char name2[10] = "The name";
+    printf("%s\n",name2);
+    
+    char name3[10] ={'a','b','\0'};
+    printf("%s\n",name3);
+    
+    char name4[10];
+    printf("Enter the name :");
+    gets(name4);
+    puts(name4);
+    
+Code 20 multidimentional array adding
+
+    
+    int i ,j,n,m;
+    printf("Enter the number of rows and column: ");
+    scanf("%d%d",&n,&m);
+    int a[n][m];
+    int b[n][m];
+    int sum[n][m];
+    printf("Enter the elemnts of A: ");
+    for(i=0;i<n;i++){
+        for(j=0;j<m;j++)
+        {
+        scanf("%d",&a[i][j]);
+        }
+    }
+
+    printf("Enter the elemnts of B: ");
+    for(i=0;i<n;i++){
+        for(j=0;j<m;j++)
+        {
+        scanf("%d",&b[i][j]);
+        }
+    }
+
+    for(i=0;i<n;i++){
+        for(j=0;j<m;j++)
+        {
+        sum[i][j]= a[i][j]+b[i][j];
+        }
+    }
+    printf("The sum is \n");
+    for(i=0;i<n;i++){
+        for(j=0;j<m;j++)
+        {
+        printf("%d\t",sum[i][j]);
+        }
+        printf("\n");
+    }
+
+Code 21 Fuction
+
+#include <stdio.h>
+
+void sum1();
+
+int sum2();
+
+void sum3(int,int);
+
+int sum4(int,int);
+
+int main() 
+{
+    sum1();
+    printf("\n");
+    
+    printf("%d is the sum in 2nd method",sum2());
+    printf("\n");
+    
+    int e,f;
+    printf("Enter the 2 Number 3rd Method");
+    scanf("%d%d",&e,&f);
+    sum3(e,f);
+    printf("\n");
+    
+    int Sum = sum4(3,5);
+    printf("%d is sum 4th method",Sum);
+    
+    
+    
+    
+}
+void sum1()
+{
+    int a,b;
+    printf("Enter 2 number 1nd Method: ");
+    scanf("%d%d",&a,&b);
+    printf("The sum is in 1nd method %d",a+b);
+    
+}
+int sum2(){
+   int c,d;
+   printf("Enter the 2 numbrs 2nd Method: ");
+   scanf("%d%d",&c,&d);
+    return c + d;
+}
+
+void sum3(int num1,int num2)
+{
+    printf("%d is sum in 3rd method",num1 + num2);
+}
+
+int sum4(int num1,int num2){
+    return num1 + num2;
+}
+
+
+Code 22
+
+#include <stdio.h>
+#include <math.h>
+
+void main() 
+{
+    float num ;
+    printf("Enter the number : ");
+    scanf("%f",&num);
+    
+    float a = sqrt(num);
+    printf("%f\n",a);
+    
+    a = pow(num,3);
+    printf("%f\n",a);
+    
+    a = round(num);
+    printf("%f\n",a);
+    
+    a = floor(num);
+    printf("%f\n",a);
+    
+    a = ceil(num);
+    printf("%f\n",a);
+    
+    a = fabs(num);
+    printf("%f\n",a);
+    
+    a = sin(num);
+    printf("%f\n",a);
+    
+    a = cos(num);
+    printf("%f\n",a);
+    
+    a = tan(num);
+    printf("%f\n",a);
+    
+    a = log(num);
+    printf("%f\n",a);
+
+}
+
+
+Code 23 Logical temperature 
+
+    // AND &&
+    
+    
+    int temp;
+    printf("Enter the temperature :");
+    scanf("%d",&temp);
+    if(temp >=0 && temp<=30){
+        printf("Its is a nice day");
+    }
+    else if(temp > 30){
+        printf("Its hot day ");
+    }
+    else{
+        printf("Its a cold day");
+    }
+
+    // OR ||
+
+    int n;
+    printf("Enter the Number :");
+    scanf("%d",&n);
+    if(n%2 ==0 || n%5 ==0){
+        printf("It can be diveided by 2 or 5");
+    }
+    else{
+        printf("It cannot  be diveided by 2 or 5");
+    }
+
+Code 24 Tenary operator
+
+    int n;
+    printf("Enter the Number :");
+    scanf("%d",&n);
+    (n!=2) ? printf("It is not 2") : printf("It is 2");
+
+Code 25

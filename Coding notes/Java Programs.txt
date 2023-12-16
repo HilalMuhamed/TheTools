@@ -1,0 +1,1500 @@
+	                             Java 
+
+
+Code 1 ( Varaible and printing)
+
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args)
+    {
+        int age = 20;
+        float height = 170.5f;
+        double weight = 60.3;
+        boolean employed = false;
+        char grade ='A';
+        String name = "Bro";
+
+        System.out.println("name = " + "\""+name +"\""+ "\nAge = "+ age +" years old\n"+ "HeightH\b = "+height + "\nWeight = "+weight+"\nGrade = "+grade+"\nEmployements\t=\t"+employed);
+    }
+}
+
+Code 2 ( Scanning variables)
+
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your FullName : ");
+        String name = sc.nextLine();
+        System.out.print("Enter you nickName: ");
+        String nickName= sc.next();
+        System.out.print("Enter your age :");
+        int age = sc.nextInt();
+        System.out.print("Enter your salary:");
+        double salary = sc.nextDouble();
+        sc.nextLine();
+        System.out.print("Enter your favorite food: ");
+        String food = sc.nextLine();
+
+        System.out.println("name = " + "\""+name +"\""+ "\nAge = "+ age +" years old\n"+ "NickName = "+nickName +"\nFood = "+ food);
+    }
+}
+
+Code 3 ( Operators)
+
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the 2 numbers : ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        System.out.println("The numbre are " + a + " and "+ b);
+
+        int sum = a+b;
+
+        System.out.println("The sum is "+sum);
+
+        System.out.println("The subtraction is " + (a-b));
+
+        System.out.println("The multiplication is " + a*b);
+
+        System.out.println("The division without decimal is "+ a/b);
+
+        System.out.println("The division with decimal is "+ (double)a/b);
+
+        System.out.println("The reminder is " + a%b);
+
+        a++;
+        b--;
+
+        System.out.println("the incrinaion of A is "+ a);
+
+        System.out.println("the decrination of B is "+ b);
+
+
+
+
+    }
+}
+
+Code 4 (Simple GUI and coverstion of datatypes)
+
+package com.company;
+import javax.swing.JOptionPane;
+
+public class Main {
+
+    public static void main(String[] args)
+    {
+        String name = JOptionPane.showInputDialog("Enter your name");
+        int age = Integer.parseInt(JOptionPane.showInputDialog("Enter your age "));
+        double salary = Double.parseDouble(JOptionPane.showInputDialog("Enter your salary"));
+        JOptionPane.showMessageDialog(null,"Your name is "+name+"\nYour age is "+age+"\nYour salry is "+salary);
+        
+    }
+}
+
+Code 5 (Math class , pythagorus theorem,Random numbers)
+
+package com.company;
+import java.util.Scanner;
+import java.util.Random;
+public class Main {
+
+    public static void main(String[] args)
+    {
+        double a = 10;
+        double b = 34.34;
+        System.out.println(Math.max(a,b));
+        System.out.println(Math.min(a,b));
+        System.out.println(Math.ceil(b));
+        System.out.println(Math.floor(b));
+        System.out.println(Math.round(b));
+        System.out.println(Math.abs(b));
+        System.out.println(Math.sqrt(a));
+        System.out.println(Math.random());
+        System.out.println(Math.round(Math.random()*13));
+
+        //Hypotenus of triangle
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of base : ");
+        int base = sc.nextInt();
+        System.out.print("Enter the value of height : ");
+        int height = sc.nextInt();
+
+        System.out.print("The hypotenus of triangle is : "+ Math.sqrt(base*base + height*height));
+        sc.close();
+        // Random Numbers
+
+        Random r = new Random();
+        int x = r.nextInt(6)+1;
+        double y = r.nextDouble();
+        boolean z = r.nextBoolean();
+
+        System.out.println("\n"+x +"\n"+ y +"\n"+ z);
+
+    }
+}
+
+Code 6 (If statement,largest of 3 numbers)
+
+package com.company;
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of the Number 3: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        if(a>b) {if(a>c) {System.out.println(a + " is largest");}}
+        else if(b>c){System.out.println(b + " is the largest ");}
+        else{System.out.println(c + " is the largest ");}
+    }
+}
+
+Code 7 (swicht statement,which week,break,continue)
+
+package com.company;
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the day : ");
+        String day = sc.next();
+        switch(day)
+        {
+            case "Monday": System.out.println("Today is Monday");
+            break;
+            case "Tuesday": System.out.println("Today is Tuesday");
+            break;
+            case "Wednesday": System.out.println("Today is Wednesday");
+            break;
+            case "Thursday": System.out.println("Today is Thursday");
+            break;
+            case "Friday": System.out.println("Today is Friday");
+            break;
+            case "Saturday": System.out.println("Today is Saturday");
+            break;
+            case "Sunday": System.out.println("Today is Sunday");
+            break;
+            default : System.out.println("That day doesnt exsist");
+        }
+    }
+}
+
+Code 8 (And or not)
+
+package com.company;
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        // AND
+
+        System.out.println("Enter the value of the Number 3: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        if(a>b &&a>c){System.out.println(a + " is largest");}
+        else if(b>c){System.out.println(b + " is the largest ");}
+        else{System.out.println(c + " is the largest ");}
+
+        // OR
+        System.out.print("Enter the Temperature : ");
+        int t = sc.nextInt();
+
+        if(t<15||t>30)
+        {
+            System.out.println("It is a bad weather");
+        }
+        else System.out.println("It is a nice weather");
+
+        // !
+
+        System.out.print("Enter the number : ");
+        int n = sc.nextInt();
+        if(n != 2)
+        {
+            System.out.println("The number is not 2");
+        }
+        else System.out.println("It is 2");
+    }
+}
+
+Code 9 (while loop,do while loop , first n numbers)
+
+package com.company;
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args)
+    {
+        int i =0;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the limit: ");
+        int n = sc.nextInt();
+        while(i<=n){
+            System.out.println(i);
+            i++;
+        }
+        do
+        {
+            System.out.println(n);
+            n--;
+        }
+        while(n>=0);
+    }
+}
+
+Code 10(for loop , sum of 1st n numbers)
+
+package com.company;
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args)
+    {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the limit: ");
+        int sum = 0;
+        int n = sc.nextInt();
+        for(int i=0;i<=n;i++)
+        {
+            sum = sum + i;
+
+        }
+        System.out.println(sum);
+    }
+}
+
+
+Code 11(nested loop, rows and columns of a symbol)
+
+package com.company;
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args)
+    {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the Number of rows: ");
+        int rows = sc.nextInt();
+        System.out.print("Enter the Number of columns: ");
+        int columns = sc.nextInt();
+        System.out.print("Enter the symbol : ");
+        String symbol = sc.next();
+
+        for(int i = 0 ;i<rows;i++){
+            System.out.println();
+            for(int j = 0;j<columns;j++){
+                System.out.print(symbol+"\t");
+            }
+        }
+    }
+}
+
+Code 12 Arrays
+
+package com.company;
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String[] food = {"burger","sandwhich","choclate"};
+        for(int i =0;i<food.length;i++){
+        System.out.println(food[i]);
+        }
+
+        String[] icecream = new String[3];
+        for(int i =0;i<icecream.length;i++){
+            System.out.print("Enter the element "+(i+1)+" :");
+            icecream[i] = sc.next();
+        }
+        for(int i =0;i<icecream.length;i++){
+            System.out.println(icecream[i]);
+
+        }
+
+
+    }
+}
+
+Code 13 2D Arrays
+
+package com.company;
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        String[][] words ={{"Hello","Wow"},{"why", "then"},{"how","wow"}};
+        for(int i= 0;i<words.length;i++){
+            for(int j=0;j<words[i].length;j++){
+                System.out.println(words[i][j]);
+            }
+        }
+        System.out.println("Enter the Number The matrix of rows and columns: ");
+        int rows = sc.nextInt();
+        int columns = sc.nextInt();
+
+        int[][] matrix1 = new int[rows][columns];
+        int[][] matrix2 = new int[rows][columns];
+
+        for(int i = 0;i<matrix1.length;i++){
+            for(int j =0 ;j< matrix1[i].length;j++){
+                System.out.print("Enter the Element ["+(i+1)+","+(j+1)+"] of matrix 1:");
+                matrix1[i][j] = sc.nextInt();
+            }
+        }
+        for(int i = 0;i<matrix2.length;i++){
+            for(int j =0 ;j< matrix2[i].length;j++){
+                System.out.print("Enter the Element ["+(i+1)+","+(j+1)+"] of matrix 2:");
+                matrix2[i][j] = sc.nextInt();
+            }
+        }
+        System.out.println("The sum of matrix is : ");
+        for(int i = 0;i<matrix1.length;i++){
+            System.out.println();
+            for(int j =0 ;j< matrix1[i].length;j++){
+                System.out.print(matrix1[i][j]+matrix2[i][j]+" ");
+
+            }
+        }
+
+    }
+}
+
+Code 14 String method
+
+package com.company;
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a String : ");
+        String word = sc.next();
+
+        System.out.println(word.equals("hello"));
+        System.out.println(word.equalsIgnoreCase("hello"));
+        System.out.println(word.isBlank());
+        System.out.println(word.isEmpty());
+        System.out.println(word.charAt(0));
+        System.out.println(word.replace('h','b'));
+        System.out.println(word.length());
+        System.out.println(word.toUpperCase());
+        System.out.println(word.toLowerCase());
+        System.out.println(word.trim());
+
+    }
+}
+
+Code 15 Wrapper class
+
+package com.company;
+
+
+public class Main {
+    public static void main(String[] args)
+    {
+
+        Integer a = 123;
+        Double b = 3.34;
+        Character c = 'a';
+        Boolean d = true;
+        String name = "hello";
+
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
+        System.out.println(name);
+
+
+    }
+}
+
+Code 16 Array List
+
+package com.company;
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        int i =0;
+        ArrayList<String> food = new ArrayList<String>();
+
+        food.add("choclate");
+        food.add("icecream");
+        food.add("pizza");
+        food.add("toco");
+        food.set(3,"biriyani");
+        while(i<food.size()){
+            System.out.println(food.get(i));
+            i++;
+        }
+    }
+}
+
+Code 17 2D Array List
+package com.company;
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        ArrayList<ArrayList<String>> grocerylist = new ArrayList<ArrayList<String>>();
+
+        ArrayList<String> snacks = new ArrayList<String>();
+        snacks.add("chips");
+        snacks.add("pototo chips");
+        snacks.add("other chips");
+        ArrayList<String> vegetables = new ArrayList<String>();
+        vegetables.add("pototo");
+        vegetables.add("fresh pototo");
+        vegetables.add("more pototo");
+        ArrayList<String> ingridients = new ArrayList<String>();
+        ingridients.add("pototo ingrideints 1");
+        ingridients.add("pototo ingrideints 2");
+        ingridients.add("pototo ingrideints 3");
+
+        grocerylist.add(snacks);
+        grocerylist.add(vegetables);
+        grocerylist.add(ingridients);
+        int i =0;
+        int j =0;
+        while(i< grocerylist.size()){
+            while(j<grocerylist.get(i).size()){
+            System.out.println(grocerylist.get(i).get(j));
+            j++;
+            }
+            i++;
+        }
+        System.out.println(grocerylist);
+        System.out.println(snacks);
+    }
+}
+
+Code 18 For each loop
+
+package com.company;
+import java.util.ArrayList;
+public class Main {
+    public static void main(String[] args)
+    {
+        ArrayList<String> s1Subjects = new ArrayList<String>();
+        s1Subjects.add("Maths");
+        s1Subjects.add("chemstry");
+        s1Subjects.add("Electrical");
+        s1Subjects.add("Mechanics");
+        s1Subjects.add("LifeSkill");
+
+        for(String i : s1Subjects){
+            System.out.println(i);
+        }
+
+    }
+}
+
+
+Code 19 Methods
+
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        sum1();
+        System.out.println("The sum is " + sum2());
+        System.out.println("Enter the 2 Numbers: ");
+        int c = sc.nextInt();
+        int d = sc.nextInt();
+        sum3(c,d);
+        System.out.println("Enter the 2 Numbers: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println("The sum4 is "+sum4(a,b));
+
+    }
+    static void sum1(){
+        System.out.println("Enter the 2 Numbers: ");
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println("The sum1 is "+(a+b));
+    }
+    static int sum2(){
+        System.out.println("Enter the 2 Numbers: ");
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        return a+b;
+    }
+    static void sum3(int a,int b){
+        System.out.println("The sum3 is "+(a+b));
+    }
+    static int sum4(int a,int b){
+        return  a+b;
+    }
+}
+
+Code 20 Overloded Methods
+
+package com.company;
+public class Main {
+    public static void main(String[] args)
+    {
+        sum1(1,2);
+        sum1(1,2,3);
+        sum1(1,2,3,4);
+        sum1(1.34,2.3,3);
+        sum1(1.4,2.6,3.3);
+        sum1(1.5,2.4,3,4);
+    }
+    static void sum1(int a,int b){
+        System.out.println("The sum1 is "+(a+b));
+    }
+    static void sum1(int a,int b,int c){
+        System.out.println("The sum2 is "+(a+b+c));
+    }
+    static void sum1(int a,int b,int c,int d){
+        System.out.println("The sum3 is "+(a+b+c+d));
+    }
+    static void sum1(double a,double b){
+        System.out.println("The sum1 is "+(a+b));
+    }
+    static void sum1(double a,double b,double c){
+        System.out.println("The sum2 is "+(a+b+c));
+    }
+    static void sum1(double a,double b,int c,int d){
+        System.out.println("The sum3 is "+(a+b+c+d));
+    }
+
+
+}
+
+Code 21 Printf 
+package com.company;
+public class Main {
+    public static void main(String[] args)
+    {
+        int a= 2;
+        float b = 0.34f;
+        double c = 3.34;
+        long d = 343242343L;
+        boolean e = true;
+        char f = '@';
+        String g = "Hello";
+
+        System.out.printf("Interger = %d\n",a);
+        System.out.printf("Float = %f\n",b);
+        System.out.printf("Double = %f\n",c);
+        System.out.printf("Long = %d\n",d);
+        System.out.printf("Boolean = %b\n",e);
+        System.out.printf("Char = %c\n",f);
+        System.out.printf("String = %s\n",g);
+    }
+
+}
+
+Code 22 final keyword
+ 
+package com.company;
+public class Main {
+    public static void main(String[] args)
+    {
+        final double pi = 3.14;
+        pi++; \\ we will get an error as final keyword cannot be changed
+    }
+
+}
+Code 23 Class Object ,atrributes , methods
+
+CLASS 1
+
+package com.company;
+public class Main {
+    public static void main(String[] args)
+    {
+        Burger b1 = new Burger();
+        Burger b2 = new Burger();
+
+        System.out.println(b1.price + "(1 st object)");
+        System.out.println(b1.name + "(1 st object)");
+        b1.taste();
+
+        System.out.println(b2.price + "(2nd object)");
+        System.out.println(b2.name + "(2nd object)");
+        b2.taste();
+    }
+
+}
+
+CLASS 2
+
+package com.company;
+
+public class Burger
+{
+    int price = 100;
+    String name = "chicken";
+
+    void taste(){System.out.println("It tastes amazing");}
+}
+
+Code 24 Constructor
+
+CLASS 1
+
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your name : ");
+        String name = sc.next();
+        System.out.print("Enter your age : ");
+        int age = sc.nextInt();
+
+        Person p1 = new Person(name,age);
+        System.out.println(p1.name);
+        System.out.println(p1.age);
+        p1.talk();
+
+        Person p2 = new Person("Name",100);
+        System.out.println(p2.name);
+        System.out.println(p2.age);
+        p2.talk();
+
+        Person p3 = new Person("Burger",-20);
+        System.out.println(p3.name);
+        System.out.println(p3.age);
+        p3.talk();
+    }
+
+}
+
+CLASS 2
+
+package com.company;
+
+public class Person
+{
+    String name;
+    int age;
+    Person(String name,int age)
+    {
+        this.name = name;
+        this.age = age;
+        System.out.println("This runs when constructor is created");
+    }
+    void talk(){System.out.println(this.name + " is speaking");}
+}
+
+Code 25 Overloaded Constructor
+
+CLASS 1
+
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        System.out.println("The ingridients 1 are: ");
+        NewBurger n1 = new NewBurger();
+
+        System.out.println("The ingridients 2 are: ");
+        NewBurger n2 = new NewBurger(2);
+        System.out.println(n2.prize);
+
+        System.out.println("The ingridients 3 are: ");
+        NewBurger n3 = new NewBurger("bad",3);
+        System.out.println(n3.taste);
+        System.out.println(n3.prize);
+
+        System.out.println("The ingridients 4 are: ");
+        NewBurger n4 = new NewBurger("Flat","GOod",4);
+        System.out.println(n4.bread);
+        System.out.println(n4.taste);
+        System.out.println(n4.prize);
+
+        System.out.println("The ingridients 5 are: ");
+        NewBurger n5 = new NewBurger("chicken","Round","Nice",5);
+        System.out.println(n5.meat);
+        System.out.println(n5.bread);
+        System.out.println(n5.taste);
+        System.out.println(n5.prize);
+
+        System.out.println("The ingridients 6 are: ");
+        NewBurger n6 = new NewBurger("No cheese","Vegetarian","Shapeless","Terrible",6);
+        System.out.println(n6.cheese);
+        System.out.println(n6.meat);
+        System.out.println(n6.bread);
+        System.out.println(n6.taste);
+        System.out.println(n6.prize);
+
+
+    }
+
+}
+
+CLASS 2
+
+package com.company;
+
+public class NewBurger
+{
+    String cheese;
+    String meat;
+    String bread;
+    String taste;
+    int prize;
+
+    NewBurger()
+    {
+        System.out.println("There are no ingridients in 1");
+    }
+
+    NewBurger( int prize)
+    {
+        this.prize = prize;
+    }
+
+    NewBurger(String taste, int prize)
+    {
+        this.taste = taste;
+        this.prize = prize;
+    }
+    NewBurger(String bread, String taste, int prize)
+    {
+        this.bread =bread;
+        this.taste = taste;
+        this.prize = prize;
+    }
+
+    NewBurger(String neat, String bread, String taste, int prize)
+    {
+        this.meat = neat;
+        this.bread =bread;
+        this.taste = taste;
+        this.prize = prize;
+    }
+
+    NewBurger(String cheese,String neat, String bread, String taste, int prize)
+    {
+        this.cheese = cheese;
+        this.meat = neat;
+        this.bread =bread;
+        this.taste = taste;
+        this.prize = prize;
+    }
+
+
+}
+
+Code 26 To String Method Overiding
+
+Class 1
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args)
+    {
+      NewCar c = new NewCar("Ferrai","blue",100000);
+
+        System.out.println(c);
+        System.out.println(c.toString());
+    }
+
+}
+
+Class 2
+
+package com.company;
+
+public class NewCar {
+
+    int prize;
+    String color;
+    String model;
+    NewCar(String model,String color,int prize)
+    {
+        this.model = model;
+        this.color = color;
+        this.prize = prize;
+    }
+    public String toString(){return model +"\n"+ color +"\n"+ prize;}
+}
+
+Code 27 Array of objects
+
+Class 1
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        GarageCar c1 = new GarageCar("maruthi");
+        GarageCar c2 = new GarageCar("bucatti");
+        GarageCar c3= new GarageCar("tesla");
+        Garage g1= new Garage(c1);
+        Garage g2= new Garage(c2);
+        Garage g3 = new Garage(c3);
+
+        g1.Fast(c1);
+        g2.Fast(c2);
+        g3.Fast(c3);
+    }
+
+}
+
+Class 2
+
+package com.company;
+
+public class Garage
+{
+    GarageCar car;
+
+    Garage(GarageCar car){
+        //this.car = car;
+        System.out.println(car.name + " is parked");
+    }
+    void Fast(GarageCar car){
+        System.out.println(car.name + " is moving fast");
+    }
+
+}
+
+Class 3
+
+package com.company;
+
+public class GarageCar
+{
+    String name;
+    GarageCar(String car){this.name = car;}
+}
+
+Code 28 Static keyword
+
+Class 1
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Friends f1 = new Friends();
+        Friends f2 = new Friends();
+        Friends f3 = new Friends();
+        System.out.println("No Friends in Friends calss static variable = "+Friends.NoOfFriends);
+        System.out.println("No Friends in Friends calss non static variable = "+f1.TotalFriends);
+        f1.displayFrieds();
+        Friends.DisplayFrieds();
+    }
+
+}
+
+
+
+Class 2
+
+package com.company;
+
+public class Friends
+{
+    static int NoOfFriends;
+    int TotalFriends;
+
+    Friends()
+    {
+        NoOfFriends ++;
+        TotalFriends++;
+    }
+    void displayFrieds(){System.out.println("The number of freids are in non static " + TotalFriends);}
+    static void DisplayFrieds(){System.out.println("The number of freids are in static " + NoOfFriends);}
+}
+
+Code 29 Inheritance
+
+Class 1 
+package com.company;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Vehicles v1 = new Vehicles();
+        v1.name = "boat";
+        Vehicles v2 = new Car("maruthi");
+        Bike v3 = new Bike("r15");
+
+        v1.speed =0;
+        v2.speed = 2;
+        v3.speed = 4;
+        //v2.doors = 34; ERROR Becase Class is intancited as vehicle not car
+
+        System.out.println(v1.name);
+        System.out.println(v2.name);
+        System.out.println(v3.name);
+        System.out.println();
+
+        System.out.println(v1.tiers);
+        System.out.println(v2.tiers); // tier is not 4 but infinite Becase Class is intancited as vehicle not car
+        System.out.println(v3.tiers);
+        System.out.println();
+
+        System.out.println(v1.speed);
+        System.out.println(v2.speed);
+        System.out.println(v3.speed);
+        System.out.println();
+
+
+        v1.move();
+        v2.move();
+        v3.move();
+        System.out.println();
+
+
+        v1.stop();
+        v2.stop();
+        v3.stop();
+        System.out.println();
+
+        v2.CarProperties();
+        v3.BikeProperties();
+
+    }
+
+}
+
+Class 2
+package com.company;
+
+public class Bike extends Vehicles
+{
+    int tiers = 2;
+
+    Bike(String name ){this.name = name;}
+
+    void move()
+    {
+        System.out.println(this.name + " is a car and its moving");
+    }
+    void BikeProperties()
+    {
+        System.out.println("Bike is faster ");
+    }
+}
+
+Class 3
+package com.company;
+
+public class Car extends Vehicles
+{
+    int tiers = 4;
+    int doors = 4;
+
+    Car(String name){this.name = name;}
+    void move()
+    {
+        System.out.println(this.name + " is a car and its moving");
+    }
+
+}
+Class 4
+
+package com.company;
+
+public class Vehicles
+{
+    String name;
+    int speed;
+    String tiers = "infinite";
+
+    void move()
+    {
+        System.out.println("The vehicle is moving");
+
+    }
+    void stop(){
+        System.out.println("The vehichle has stopped");
+    }
+    void CarProperties()
+    {
+        System.out.println("car is more effeicent");
+    }
+}
+
+Class 30 superKeyword
+
+Class 1
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        SuperHuman batman = new SuperHuman(30,"batman","Rich");
+        SuperHuman Superman = new SuperHuman(32,"Superman","SuperPower");
+        System.out.println(batman.age);
+        System.out.println(batman.name);
+        System.out.println(batman.power);
+        System.out.println(Superman.age);
+        System.out.println(Superman.name);
+        System.out.println(Superman.power);
+        batman.power();
+        Superman.power();
+    }
+
+}
+
+Class 2
+
+package com.company;
+
+public class Human
+{
+    int age;
+    String name;
+    Human(int age,String name ){
+        this.age = age;
+        this.name = name;}
+    public String toString(){return this.name +" is his name and age is " + this.age;}
+}
+
+Class 3
+
+package com.company;
+
+public class SuperHuman extends Human
+{
+    String power;
+    SuperHuman(int age, String name,String power){
+        super(age,name);
+        this.power = power;
+        }
+        void power(){
+            System.out.println(super.toString() +" and his power is "+this.power);
+        }
+}
+
+Class 31 abstraction 
+
+class 1
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args)
+    {
+
+        //Vehicles01 v = new Vehicles01(); // not possible
+        Car01 c = new Car01();
+
+        c.go();
+        c.moving();
+
+    }
+
+}
+
+class 2
+
+package com.company;
+
+public  abstract class Vehicles01 {
+
+    abstract void go();
+    void moving(){System.out.println("The vehicle moves");};
+}
+
+class 3
+
+package com.company;
+
+public class Car01 extends Vehicles01{
+    @Override
+    void go(){System.out.println("The car start moving ");}
+}
+
+
+Code 32 Encapsulation
+
+Class 1 
+
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Car02 c = new Car02("Tesla",10000,"red");
+
+        System.out.println(c.getName());
+        System.out.println(c.getPrize());
+        System.out.println(c.getColor());
+
+        c.setName("nano");
+        c.setPrize(10);
+        c.setColor("yello");
+        
+        System.out.println(c.getName());
+        System.out.println(c.getPrize());
+        System.out.println(c.getColor());
+
+
+    }
+
+}
+
+Class 2
+
+package com.company;
+public class Car02
+{
+    private String name ;
+    private int prize ;
+    private String color;
+
+    Car02(String name,int prize,String color){this.name = name; this.prize = prize;this.color = color;}
+
+    String getName(){return this.name;}
+    int getPrize(){return this.prize;}
+    String getColor(){return this.color;}
+
+    void setName(String name){this.name = name;}
+    void setPrize(int prize){this.prize = prize;}
+    void setColor(String color){this.color = color;}
+}
+
+Code 33 Copying objects in java
+
+Class 1
+
+        System.out.println(c2);
+        System.out.println(c2.name);
+        System.out.println(c2.speed);
+        System.out.println(c2.color);
+        
+        
+
+Class 2
+
+package com.company;
+
+public class Car03
+{
+    String name;
+    int speed;
+    String color;
+
+    Car03(String name , int speed, String color){this.name = name;this.speed = speed; this.color = color;}
+    Car03(Car03 c){this.name = c.name;this.speed = c.speed; this.color = c.color;}
+
+    void Copy(Car03 c){this.name = c.name;this.speed = c.speed;this.color=c.color;}
+}
+
+Code  34 Interface
+
+Class 1
+package com.company;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Cats c = new Cats();
+        c.run();
+        c.hunt();
+    }
+
+}
+
+Class 2 
+package com.company;
+
+public class Cats implements Prey,Predator
+{
+    public void run(){System.out.println("The cat is chased");}
+    public void hunt(){System.out.println("The cat is taking over the world");}
+}
+
+Class 3
+package com.company;
+
+public interface Prey {
+    void run();
+}
+
+Class 4
+package com.company;
+
+public interface Predator {
+    void hunt();
+}
+
+
+Code 35 Polymorphisum 
+
+class 1
+package com.company;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Cat c = new Cat();
+        Dog d = new Dog();
+        Panda p = new Panda();
+
+        Animal a[] = {c,d,p};
+        for(Animal i : a)
+        {
+            i.Best();
+        }
+
+
+    }
+
+}
+
+
+class 2
+package com.company;
+
+public class Animal
+{
+    void Best(){System.out.println("Animal are the best"); }
+}
+ 
+class 3
+package com.company;
+
+public class Cat extends Animal{
+
+    @Override
+    void Best(){System.out.println("Cats are the best ");}
+}
+
+class 4      
+package com.company;
+
+public class Dog extends Animal
+{
+    void Best(){System.out.println("The dogs are the best ");}
+}
+
+class 5
+
+package com.company;
+public
+class
+Panda
+extends
+Animal
+{
+void
+Best
+()
+{
+System
+.
+out
+.
+println
+("The pandas are the best ")
+;
+}
+}
+
+Code 36  Dynamic Polymorphisum
+
+class 1
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args)
+    {
+        Animal a;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter \n 1 = cat \n 2 = dog \n 3 = panda");
+        int choice = sc.nextInt();
+        if(choice == 1){
+            a = new Cat();
+            a.Best();
+        }
+        else if (choice == 2){
+            a = new Dog();
+            a.Best();
+        }
+        else if (choice == 3){
+            a = new Panda();
+            a.Best();
+        }
+        else {
+            a = new Animal();
+            a.Best();
+        }
+
+    }
+
+}
+
+class 2
+package com.company;
+
+public class Animal
+{
+    void Best(){System.out.println("Animal are the best"); }
+}
+ 
+class 3
+package com.company;
+
+public class Cat extends Animal{
+
+    @Override
+    void Best(){System.out.println("Cats are the best ");}
+}
+
+class 4      
+package com.company;
+
+public class Dog extends Animal
+{
+    void Best(){System.out.println("The dogs are the best ");}
+}
+
+class 5
+
+package com.company;
+public
+class
+Panda
+extends
+Animal
+{
+void
+Best
+()
+{
+System
+.
+out
+.
+println
+("The pandas are the best ")
+;
+}
+}
+Code 37 Exception handling 
+package com.company;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args)
+    {
+        int dev =0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the 2 number to divid : ");
+        try{int a = sc.nextInt();
+        int b = sc.nextInt();
+        dev = a/b;}
+        catch (ArithmeticException e ){System.out.println("Cannot be divided be zero");}
+        catch (InputMismatchException e ){System.out.println("it is not a number ");}
+        catch (Exception e ){System.out.println("something went wrong ");}
+        finally{System.out.println(dev + " is the result");}
+    }
+
+}
+
+Code 38 file class (Recheck file write ,reader)
+
+package com.company;
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args){
+        File f = new File("F:\\hilu\\computer\\Coding notes");
+        if (f.exists()) {
+            System.out.println("The file exsist");
+        } else
+        {
+            System.out.println("It does not exsist");
+        }
+        System.out.println(f.getPath()+" is its path");
+        System.out.println(f.getAbsolutePath()+" is its Absolutepath");
+
+        try {
+            FileWriter fw = new FileWriter("F:\\hilu\\computer\\Coding notes.txt");
+            fw.write("Hellow world \n");
+            fw.append("what is going on ");
+
+            FileReader fr = new FileReader("F:\\hilu\\computer\\Coding notes.txt");
+            int data = fr.read();
+            System.out.println((char) data);
+            if (fr.read() == 0) {
+                data = fr.read();
+                System.out.print((char)data);
+
+            }
+            fw.close();
+            fr.close();
+        }catch (FileNotFoundException e){e.printStackTrace();
+            System.out.println("wow");}
+        catch (IOException e ) {e.printStackTrace();
+            System.out.println("why");}
+
+
+
+    }
+}
+
+
+Code 39 
+
+
+      

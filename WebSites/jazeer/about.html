@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Page</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bebas+Neue&family=Bungee+Shade&family=Caesar+Dressing&family=Chewy&family=Dancing+Script&family=Edu+QLD+Beginner&family=Faster+One&family=Finger+Paint&family=Fredericka+the+Great&family=Inspiration&family=Lobster&family=Noto+Music&family=Noto+Sans+Anatolian+Hieroglyphs&family=Noto+Sans+Egyptian+Hieroglyphs&family=Noto+Sans+Linear+B&family=Noto+Sans+Meroitic&family=Noto+Sans+Nabataean&family=Playfair+Display&family=Poppins&family=Press+Start+2P&family=Rubik+80s+Fade&family=Rubik+Glitch&family=Rubik+Marker+Hatch&family=Rubik+Moonrocks&family=Rubik+Pixels&family=Stick&family=Titan+One&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        
+html
+{
+    background-image: linear-gradient(to bottom, white, rgb(219, 219, 219));
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-image: linear-gradient(to right, #333, #1a1a1a);
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+nav
+{
+    margin:1px;
+    color: #fff;
+    
+}
+nav ul
+{
+    list-style-type:none;
+    display:flex;
+    gap:40px;
+    margin:0;
+}
+header a
+{
+    text-decoration:none;
+    color:white;
+    text-transform:uppercase;
+    font-family: 'Poppins';
+    font-size:20px;
+    position:relative;
+    
+}
+header nav li a:hover
+{
+    border-bottom:2px solid rgb(56, 56, 56);
+    text-shadow: 0px 0px 10px white;
+}
+#about{
+    border-bottom:2px solid rgb(150,150,150);
+}
+#logo
+{
+    font-size:50px;
+    text-shadow: 0px 0px 5px white;
+}
+
+h2{
+
+    font-family: 'Inspiration';
+    font-size:80px;
+    font-weight:bold;
+    transition: transform text-decoration 0.3s ease-in-out;
+}
+main {
+    font-size:20px;
+    font-family:'Playfair Display';
+    font-weight:normal;
+    margin: 130px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: center;
+
+    
+}
+
+h2:hover
+{
+    transform: scale(1.04);
+}
+
+.theimage
+{
+    border-radius: 50%;
+    width:200px;
+    display: flex;
+    margin: auto;
+    transition: transform 0.3s ease-in-out;
+}
+.theimage:hover {
+    transform: scale(1.1);
+  }
+#name
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+.overlay
+{
+    position:absolute;
+    z-index: 999;
+    background: white;
+    margin:auto;
+    width: 100%;
+    height: 100%;
+    animation: reveal 1.5s ease-in  forwards;
+    transform-origin:bottom;
+}
+@keyframes reveal
+{
+    from{transform:scaleY(1);}
+    to{transform:scaleY(0);}
+}
+main
+{
+    animation:growIn 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    transform: scale(.2);
+}
+@keyframes growIn
+{
+    to{transform:scale(1);}
+}
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <a href="#" id =logo><b>OGLIO</b></h2></li></a>
+        <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a id ="about" a href="#" >About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+        <div>
+    <div class ="info">
+        
+        <img class="theimage" src="https://images.pexels.com/photos/33787/chimpanzee-sitting-sad-mammal.jpg?auto=compress&cs=tinysrgb&w=1600">
+        <h2 id="name">Jazeer</h2>
+    </div>
+    <div>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium deserunt, animi culpa, harum in laboriosam odit accusantium sit similique, repudiandae laborum. Doloremque eius accusantium ratione voluptatibus labore, facilis veniam placeat!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque aliquid exercitationem ex magnam voluptate, dolorem natus animi soluta dolores ratione. Ex nam aperiam nemo enim officia adipisci alias sapiente atque.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium deserunt, animi culpa, harum in laboriosam odit accusantium sit similique, repudiandae laborum. Doloremque eius accusantium ratione voluptatibus labore, facilis veniam placeat!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque aliquid exercitationem ex magnam voluptate, dolorem natus animi soluta dolores ratione. Ex nam aperiam nemo enim officia adipisci alias sapiente atque.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, molestias fugit! Repellendus assumenda officia non sint in natus provident velit dolorem. Eius illo sequi aliquid labore laborum distinctio quis veritatis?
+            
+        </p>
+    </div>
+    </div>
+    <div id="icon">   
+        <a href="#"><i class="fa-brands fa-youtube" style="color:red"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook" style="color:rgb(0, 102, 255)"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin" style="color:rgb(0, 60, 170)"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter" style="color:rgb(0, 217, 255)"></i></a>
+        <a href="#"><i class="fa-brands fa-github" style="color:rgb(32, 32, 32)"></i></a>
+    </div>
+    </main>
+    
+</body>
+</html>

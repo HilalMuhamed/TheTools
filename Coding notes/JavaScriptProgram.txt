@@ -1,0 +1,22 @@
+Code 1 printing
+
+console.log("Hello");
+
+window.alert("Hello");
+
+Code 2 varaibles 
+
+
+JS
+
+
+let name = "batman";
+let age = 34;
+let student = true;
+
+console.log("Hello",name);
+console.log("his age is ",age);
+console.log("You are a student "+student);
+
+document.getElementById("p1").innerHTML = "Hello "+name+" he is "+age;
+

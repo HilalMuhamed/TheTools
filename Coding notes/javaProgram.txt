@@ -1,0 +1,1787 @@
+package com.company;
+
+
+import javax.swing.*;
+import java.lang.reflect.Array;
+import java.util.*;
+
+public class Main {
+
+    static void hello(){
+        System.out.println("HElLO");
+    }
+    static void helloName(String TheName){
+        System.out.println("Hello "+ TheName);
+    }
+
+    static void ageAndName(String yourName,int yourAge ){
+        System.out.println("Hello " +yourName +", You are "+  yourAge +"years old"  );
+    }
+
+    static int add(int a, int b) {
+        int sum = a + b;//or return a + b;
+        return sum;
+    }
+
+    static int adds(int a, int b){
+        System.out.println("This is overloaded method number 1");
+        return a + b;
+    }
+    static int adds(int a, int b,int c){
+        System.out.println("This is overloaded method number 2");
+        return a + b + c;
+    }
+    static int adds(int a, int b,int c,int d){
+        System.out.println("This is overloaded method number 3");
+        return a + b +c + d;
+    }
+    static double adds(double a, double b){
+        System.out.println("This is overloaded method number 4");
+        return a + b;
+    }
+    static double adds(double a, double b,double c){
+        System.out.println("This is overloaded method number 5");
+        return a + b + c;
+    }
+    static double adds(double a, double b,double c,double d){
+        System.out.println("This is overloaded method number 6");
+        return a + b + c +d;
+    }
+
+    public static void main(String[] args) {
+//
+//        // 1 Print
+//
+//        System.out.print("hi,");
+//        System.out.println("Hello world");
+//        System.out.print("I love pizza.\n");
+//        System.out.println("\"Its really good\"\n");
+//        System.out.println("Learn\tjava");
+//
+//        // This is a comment
+//
+//        /* This is also
+//        a comment, which can be multiple line
+//        */
+//
+//        // 2 variable
+//
+//        int x;
+//        x = 123;
+//        System.out.println(x);
+//
+//        int y = 456;
+//        System.out.println(y);
+//        System.out.println("The number is "+ y);
+//
+//        long z = 1234567890L;  //l or L
+//        System.out.println(z);
+//
+//        byte a = 100;
+//        System.out.println(a);
+//
+//        short b = 130;
+//        System.out.println(b);
+//
+//        double c = 1.1;
+//        System.out.println(c);
+//
+//        float d = 1.1F;  //F or f
+//        System.out.println(d);
+//
+//        boolean e = true;
+//        boolean f = false;
+//        System.out.println(e);
+//        System.out.println(f);
+//
+//        char g = 'a';
+//        System.out.println(g);
+//
+//        String name = "hilal";
+//        System.out.println(name);
+//
+//        // 3 swap 2 variable
+//
+//        String x = "water";
+//        String y = "Tang";
+//
+//        System.out.println("x =" + x);
+//        System.out.println("y ="+y);
+//
+//        x = y;
+//
+//        System.out.println("x =" + x);
+//        System.out.println("y ="+y);
+//
+//        String a = "water";
+//        String b = "Tang";
+//
+//        b = a;
+//
+//        System.out.println("a =" + a);
+//        System.out.println("b ="+b);
+//
+//        String c = "water";
+//        String d = "Tang";
+//        String z; //or String z = null;
+//
+//        z = c;
+//        c = d;
+//        d = z;
+//        System.out.println("c =" +c);
+//        System.out.println("d ="+d);
+//
+//        // 4 user input
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("What is your name: ");
+//        String name = scanner.nextLine();
+//        System.out.println("Hello "+ name);
+//
+//        System.out.print("How old are you: ");
+//        int age = scanner.nextInt();
+//        scanner.nextLine(); // otherwise the next input is not asked from the user
+//        System.out.println("You are "+ age + " years old");
+//
+//        System.out.println("What is your favorite food: ");
+//        String food = scanner.nextLine();
+//        System.out.println("Your favorite food is "+ food);
+//
+//        // 5 experssion
+//
+//        int friends = 30;
+//        friends = friends +1; // or friends++;
+//        System.out.println(friends);
+//
+//        friends = friends -11;
+//        System.out.println(friends);
+//
+//        friends = friends *2;
+//        System.out.println(friends);
+//
+//        friends = friends / 2;
+//        System.out.println(friends);
+//
+//        friends = friends % 3; //reminder
+//        System.out.println(friends);
+//
+//        double friend = 3;
+//        friend = friend /2;
+//        System.out.println(friend);
+//        friend = (int) friend/3; //to remove decimals
+//        System.out.println(friend);
+//
+//        // 6 gui introduction (graphical user interface
+//
+//        String name = JOptionPane.showInputDialog("Enter your name:");
+//        JOptionPane.showMessageDialog(null, "Hello " + name);
+//
+//        int age = Integer.parseInt(JOptionPane.showInputDialog("Enter your age:"));
+//        JOptionPane.showMessageDialog(null,"You are "+ age + "years old");
+//
+//        double height = Double.parseDouble(JOptionPane.showInputDialog("Enter your height:"));
+//        JOptionPane.showMessageDialog(null,"You are "+ height + "cm tall");
+//
+//        // 7  Math class
+//
+//        double x = 3.14;
+//        double y = -10;
+//
+//        double z = Math.max(x,y);
+//        System.out.println(z);
+//
+//        z = Math.min(x,y);
+//        System.out.println(z);
+//
+//        z = Math.abs(y);
+//        System.out.println(z);
+//
+//        z = Math.sqrt(x);
+//        System.out.println(z);
+//
+//        z = Math.round(x);
+//        System.out.println(z);
+//
+//        z = Math.ceil(x);
+//        System.out.println(z);
+//
+//        z = Math.floor(x);
+//        System.out.println(z);
+//
+//        double a;
+//        double b;
+//        double c;
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter the base: ");
+//        a = scanner.nextDouble();
+//        System.out.print("Enter the adjacent side: ");
+//        b = scanner.nextDouble();
+//        c = Math.sqrt((a*a)+(b*b));
+//        System.out.println("The hypotenus is "+ c);
+//        scanner.close();
+//
+//
+//        // 8 random value
+//
+//        Random random = new Random();
+//
+//        int x = random.nextInt();
+//        System.out.println(x);
+//
+//        int y = random.nextInt(6);// between 5 and 0
+//        System.out.println(y);
+//
+//        int z = random.nextInt(6)+1;// between 6 and 0
+//        System.out.println(z);
+//
+//        double a = random.nextDouble();
+//        System.out.println(a);
+//
+//        boolean b = random.nextBoolean();
+//        System.out.println(b);
+//
+//        double c = Math.random();
+//        System.out.println(c);
+//
+//        int d = (int) (Math.random()*10);
+//        System.out.println(d);
+//
+//        double e = Math.round(Math.random()*100);
+//        System.out.println(e);
+//
+//        // 9 if statement
+//
+//        int age = 18;
+//        if (age>=18){
+//            System.out.println("You are adult");
+//        }
+//
+//
+//        age = 8;
+//        if (age>=18){
+//            System.out.println("You are adult");
+//        }
+//        else{
+//            System.out.println("You are not an adult");
+//        }
+//
+//        age = 75;
+//        if (age>=75) {
+//            System.out.println("Ok");
+//        }
+//        else if (age>=18){
+//            System.out.println("You are adult");}
+//        else{
+//            System.out.println("You are not an adult");
+//        }
+//
+//        age = 14;
+//        if (age>=75) {
+//            System.out.println("Ok");
+//        }
+//        else if (age>=18){
+//            System.out.println("You are adult");
+//        }
+//        else if(age>=13){
+//            System.out.println("You are a teenager");
+//        }
+//        else{
+//            System.out.println("You are not an adult");
+//        }
+//
+//        //10 switches
+//
+//        System.out.print("what day is it: ");
+//        Scanner sc = new Scanner(System.in);
+//        String day = sc.nextLine().toLowerCase();
+//        switch(day){
+//            case "sunday":
+//                System.out.println("It is sunday!");
+//                break;
+//            case "monday":
+//                System.out.println("It is monday!");
+//                break;
+//            case "tuesday":
+//                System.out.println("It is tuesday!");
+//                break;
+//            case "wednesday":
+//                System.out.println("It is wednesday!");
+//                break;
+//            case "thursday":
+//                System.out.println("It is Thursday!");
+//                break;
+//            case "friday":
+//                System.out.println("It is friday!");
+//                break;
+//            case "saturday":
+//                System.out.println("It is saturday!");
+//                break;
+//            default:
+//                System.out.println("That is not a date");
+//        }
+//
+//        // 11 logical operator
+//
+//        // && = and
+//        // || = or
+//        // ! = not
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.print("Temperature: ");
+//        int temp = sc.nextInt();
+//        sc.nextLine();
+//        if(temp>30){
+//            System.out.println("It is hot outside");
+//        }
+//        else if (temp >= 20 && temp <= 30){
+//            System.out.println("It is warm outside");}
+//
+//        else{
+//            System.out.println("It is cold outside");
+//        }
+//
+//        System.out.print("You are playing a game! Press Q or q to quit ");
+//        String response = sc.nextLine();
+//
+//        if (response.equals("q")|| response.equals("Q")){
+//            System.out.println("You quit the game");
+//        }
+//        else{
+//            System.out.println("you are still playing the game");
+//        }
+//
+//        if (!response.equals("q") && !response.equals("Q")){
+//            System.out.println("You still want to play the game ");
+//        }
+//        else{
+//            System.out.println("you are just quited the game");
+//        }
+//
+//        // 12 while loops and do while loops (excutes the program until condition is true)
+//
+//        Scanner sc = new Scanner(System.in);
+//        String name = "";
+//        while(name.isBlank()){
+//            System.out.print("Enter your name ");
+//            name = sc.nextLine();
+//        }
+//        System.out.println("Hello "+ name);
+//
+//
+//        do{ // do loops atleast performs the task ones
+//            System.out.print("Enter your name ");
+//            name = sc.nextLine();
+//        }while(name.isBlank());
+//        System.out.println("Hello "+ name);
+//
+//        // 13 for loops (excutes the statement until limited amount of time)
+//
+//        for(int i = 10; i>=0; i--){
+//            System.out.println(i);
+//        }
+//        for(int i = 0; i<=10; i++){
+//            System.out.println(i);
+//        }
+//        //or
+//        for(int i = 0; i<=10;){
+//            System.out.println(i);
+//            i++;
+//        }
+//        System.out.println("Happy new year!");
+//
+//        //14 nested loops ( loops inside a loop )
+//
+//        Scanner sc = new Scanner(System.in);
+//        int rows;
+//        int coulumn;
+//        String symbol;
+//        System.out.print("Enter the number of rows: ");
+//        rows = sc.nextInt();
+//        System.out.print("Enter the number of coulumn: ");
+//        coulumn = sc.nextInt();
+//        System.out.print("Enter the symbol: ");
+//        sc.nextLine();
+//        symbol = sc.nextLine();
+//
+//        for(int i = 1 ; i <=rows ; i++){
+//            System.out.println();
+//            for(int j = 1 ; j <= coulumn ; j++){
+//                System.out.print(symbol + " ");
+//            }
+//        }
+//
+//        // 15 Arrays (used to store multiple value in a single variable)
+//
+//        String[] cars = {"benz","tesla","bmw"};
+//        System.out.println(cars[0]);
+//
+//        cars [0] = "ferrari";
+//        System.out.println(cars[0]);
+//
+//
+//        String[] foods = new String[3];
+//        foods[0] = "pizza";
+//        foods[1] = "burger";
+//        foods[2] = "chiken";
+//        System.out.println(Arrays.toString(foods));
+//
+//        for(int i =0;i < foods.length;i++){
+//            System.out.println(foods[i]);
+//        }
+//
+//        // 16 2d Arrays , Multidemintional arrays
+//
+//        String[][] cars = new String[3][3];
+//
+//        cars[0][0] = "benz";
+//        cars[0][1] = "tesla";
+//        cars[0][2] = "bmw";
+//
+//        cars[1][0] = "ferari";
+//        cars[1][1] = "tesla";
+//        cars[1][2] = "nano";
+//
+//        for (int i=0; i<cars.length; i++){
+//            System.out.println();
+//            for(int j =0; j< cars.length;j++){
+//                System.out.print(cars[i][j] + " ");
+//            }
+//        }
+//
+//        String[][] foods = {
+//                {"pizza","burger","apple"},
+//                {"icecream","cofee","water"},
+//                {"tea","borota","dosa"}
+//        };
+//        System.out.println(Arrays.toString(foods));
+//
+//        for (int a=0; a<foods.length; a++){
+//            System.out.println();
+//            for(int b =0; b< foods.length;b++){
+//                System.out.print(foods[a][b] + " ");
+//            }
+//        }
+//
+//        // 17 String methods
+//
+//        String name = " hilal MUHAMMED";
+//
+//        System.out.println(name.equals("habeeb"));
+//        System.out.println(name.equals("hilal"));
+//        System.out.println(name.equals("Hilal"));
+//        System.out.println(name.equalsIgnoreCase("HIlal"));
+//
+//        System.out.println(name.length());
+//
+//        System.out.println(name.charAt(1));
+//
+//        System.out.println(name.indexOf("i"));
+//        System.out.println(name.indexOf("b")); // if does not exsit it will give -1
+//
+//        System.out.println(name.isEmpty());
+//        System.out.println(name.isBlank());
+//
+//        System.out.println(name.toUpperCase());
+//        System.out.println(name.toLowerCase());
+//        System.out.println(name.trim());
+//
+//        System.out.println(name.replace('i','a'));
+
+//        // 18 wrapper classes (allows to use primitive data type as reference data type, reference has useful methods
+//
+//        // refernce has more methods but slower than primitive
+//        // autoboxing = automatic convertion primitive to reference
+//        // unboxing = automatic converion of wrapper to pimitive
+//        //Use primitve type by changing first letter to capital and writing the full form
+
+//        Boolean a = true;
+//        Character b = 'b';
+//        Integer c = 1234;
+//        Double d = 3.14;
+//        String e = "Hilal";
+//
+//        if (a==true){  // a acts primitive despite being reference
+//            System.out.println("this is fun");
+//        }
+//
+//        //19 Array list
+//
+//        /* ArrayList = a resizable array.
+//           Elements can be added and removed after complilation phase
+//           can only store refernce data type
+//         */
+//
+//        ArrayList<String> food = new ArrayList<String>();
+//
+//        food.add("pizza");
+//        food.add("hamburger");
+//        food.add("hotdog");
+//
+//        for (int i = 0 ; i < food.size(); i ++)
+//            System.out.println(food.get(i));
+//
+//        System.out.println("");
+//
+//        food.set(0,"sushi");
+//        food.remove(2);
+//        for (int i = 0 ; i < food.size(); i ++)
+//            System.out.println(food.get(i));
+//
+//        food.clear();
+//
+//        for (int i = 0 ; i < food.size(); i ++)
+//            System.out.println(food.get(i));
+//
+//
+//        // 20 2D Arrays list
+//
+//        ArrayList<String> backeryList = new ArrayList();
+//
+//        backeryList.add("pasta");
+//        backeryList.add("garlic bread");
+//        backeryList.add("donuts");
+//        System.out.println(backeryList);
+//
+//
+//        ArrayList<String> produceList = new ArrayList();
+//
+//        produceList.add("tomatoes");
+//        produceList.add("carrots");
+//        produceList.add("apple");
+//        System.out.println(produceList);
+//
+//        ArrayList<String> drinksList = new ArrayList();
+//
+//        drinksList.add("pepsi");
+//        drinksList.add("soda");
+//        System.out.println(drinksList);
+//
+//        ArrayList<ArrayList<String>> groceryList = new ArrayList<>();
+//
+//        groceryList.add(backeryList);
+//        groceryList.add(produceList);
+//        groceryList.add(drinksList);
+//        System.out.println(groceryList);
+//
+//        System.out.println(groceryList.get(0));
+//        System.out.println(groceryList.get(0).get(0));
+//        System.out.println(groceryList.get(2).get(1));
+//
+//        // 21 for each loop
+//
+//        String[] animals = {"cat", "dog","rat", "bird"};
+//        for(String i : animals ){
+//            System.out.println(i);
+//        }
+//
+//        System.out.println();
+//
+//        ArrayList<String> animal = new ArrayList();
+//        animal.add("cat");
+//        animal.add("cat");
+//        animal.add("dog");
+//        animal.add("cat");
+//        animal.add("fish");
+//
+//        for(String i : animal ){
+//            System.out.println(i);
+//        }
+//
+//        //22 methods ( a piece of code that is excuted when it is called upon) , write method or function at the top , outside the main method
+//
+//
+////        At top
+////        static void hello(){
+////            System.out.println("HElLO");
+////        }
+//        hello();
+//        hello();
+//        hello();
+//
+//////      At top
+////        static void helloName(String TheName){
+////            System.out.println("Hello"+ TheName);
+////        }
+//        String name = "Hilal";
+//        helloName(name);
+//
+////        At top
+////        static void ageAndName(String yourName,int yourAge ){
+////            System.out.println("Hello " +yourName +", You are "+  yourAge +"years old"  );
+////        }
+//        String Name = "Bro";
+//        int age = 21;
+//        ageAndName(Name,age);
+//
+////        top
+////        static int add(int a, int b) {
+////            int sum = a + b;
+////            return sum;
+////        }
+//
+////        Top
+////        static int add(int a, int b) {
+////            int sum = a + b;//or return a + b;
+////            return sum;
+//        int x = 3;
+//        int y = 4;
+//        int sum = add(x,y);
+//        System.out.println(sum);
+//        System.out.println(add(x,y));
+//
+//        // 23 overloaded method ( methods with same name but have different parameter)
+////
+////        At top
+////        static int adds(int a, int b){
+////            System.out.println("This is overloaded method number 1");
+////            return a + b;
+////        }
+////        static int adds(int a, int b,int c){
+////            System.out.println("This is overloaded method number 2");
+////            return a + b + c;
+////        }
+////        static int adds(int a, int b,int c,int d){
+////            System.out.println("This is overloaded method number 3");
+////            return a + b+c+d;
+////        }
+//
+//
+//        int x = adds(1,2);
+//        System.out.println(x);
+//
+//        int y = adds(1,2,3);
+//        System.out.println(y);
+//
+//        int z = adds(1,2,3,4);
+//        System.out.println(z);
+//
+//        //Top
+////        static double adds(double a, double b){
+////            System.out.println("This is overloaded method number 4");
+////            return a + b;
+////        }
+////        static double adds(double a, double b,double c){
+////            System.out.println("This is overloaded method number 5");
+////            return a + b + c;
+////        }
+////        static double adds(double a, double b,double c,double d){
+////            System.out.println("This is overloaded method number 6");
+////            return a + b + c +d;
+////        }
+//
+//        double a = adds(1,2);
+//        System.out.println(a);
+//
+//        double b = adds(1,2,3.0);
+//        System.out.println(b);
+//
+//        double c = adds(1.0,2.0,3.0,4.0);
+//        System.out.println(c);
+//
+//        //24 printf method - printf()  = an optional method to control , format or display the text to the console window
+//
+//        System.out.printf("This is a format string %d \n",123);
+//        System.out.printf("The number is %d used in above code \n",123);
+//        int a = 123;
+//        System.out.printf("This is also the same number %d \n",a);
+//
+//        boolean myBoolean = true;
+//        char myChar = 'A';
+//        String myString = "Bro";
+//        int myInt = 50;
+//        double myDouble = 1000;
+//
+//        // convertion charaters
+//
+//        System.out.printf("%b \n",myBoolean);
+//        System.out.printf("%c\n",myChar);
+//        System.out.printf("%s\n",myString);
+//        System.out.printf("%d\n",myInt);
+//        System.out.printf("%f\n",myDouble);
+//
+//        // width field = minimum numberof charaters to be written as ouput
+//
+//        System.out.printf("Hello %10s \n",myString);
+//        System.out.printf("Hello %-10s\n",myString);
+//
+//        // precition field = sets number of digits of precision of outputting floating piont values
+//
+//        System.out.printf("You have this much money %.2f\n",myDouble);
+//
+//        // flags adds an effect to output based on the flag added to fromat specifier
+//
+//        System.out.printf("You have this much money %-20f\n",myDouble);
+//        System.out.printf("You have this much money %+20f\n",myDouble);
+//        System.out.printf("You have this much money %020f\n",myDouble);
+//        System.out.printf("You have this much money %,f",myDouble);
+//
+//
+//        // 25 final variable
+//
+//        final double PI = 3.14;
+//        System.out.println(PI);
+//
+//        // 26 oops(object oriented programming)
+//
+//        // object = an instance of a class that may contain attributes and methods
+//        // example; (phone,desk,computer,cofee)
+//
+//
+//        // On a different file Car.java (different class)
+//
+//        Car myCar = new Car();
+//
+//        myCar.drive();
+//        myCar.brake();
+//        System.out.println(myCar.make);
+//        System.out.println(myCar.color);
+//
+//        Car myCar2 =  new Car();   // can create multiple objects
+//
+//        myCar.drive();
+//        myCar.brake();
+//        System.out.println(myCar.make);
+//        System.out.println(myCar2.price);
+//        System.out.println(myCar2.model);
+//
+//        // 27 constructor (a special method which is called when object is created)
+//
+//        human human1 = new human("soos",19,80);
+//        human human2 = new human("dipper",13,40);
+//
+//        System.out.println(human1.name);
+//        System.out.println(human2.age);
+//        human1.eat();
+//        human1.drink();
+//
+//        // 28 variable scope
+//
+//        // local = declared inside a method visible only in the method
+//        // global = declared inside outside a method but within a class visible to all parts of a class
+//
+//        DiceRoller diceRoller = new DiceRoller();
+
+//        // 29 overloaded constructor
+//
+//
+//        /* it is similar to overlaoaded methods
+//        multiple constructers within class with same name but different parameters
+//         */
+//
+//        Pizza pizza1 = new Pizza("toasted bun","tomato","chicken","onion");
+//        System.out.println("THe ingridients of burger1 : "+ pizza1.bun);
+//        System.out.println("THe ingridients of burger1 : "+ pizza1.sauce);
+//        System.out.println("THe ingridients of burger1 : "+ pizza1.meat);
+//        System.out.println("THe ingridients of burger1 : "+ pizza1.vegitables+"\n");
+//
+//        Pizza pizza2 = new Pizza("baked bun","pepper","beef");
+//        System.out.println("THe ingridients of burger2 : "+ pizza2.bun);
+//        System.out.println("THe ingridients of burger2 : "+ pizza2.sauce);
+//        System.out.println("THe ingridients of burger2 : "+ pizza2.meat+"\n");
+//
+//        Pizza pizza3 = new Pizza("not toasted bun","pepper");
+//        System.out.println("THe ingridients of burger3 : "+ pizza3.bun);
+//        System.out.println("THe ingridients of burger3 : "+ pizza3.sauce+"\n");
+//
+//        Pizza pizza4 = new Pizza("plain bun");
+//        System.out.println("THe ingridients of burger4 : "+ pizza4.bun +"\n");
+//
+//        Pizza pizza5 = new Pizza();
+//        System.out.println("The incgridients of burger5 :" + pizza5.bun+"\n");
+
+//        // 30 To String method in objects
+//
+//        TheCar theCar = new TheCar();
+//        System.out.println(theCar.toString());
+//        System.out.println(theCar);
+//
+//        // 31 array of objects
+//
+//        Food[] refrigerator = new Food[3];
+//        Food food1 = new Food("Pizza");
+//        Food food2 = new Food("burger");
+//        Food food3 = new Food("taco");
+//        refrigerator[0] = food1;
+//        refrigerator[1] = food1;
+//        refrigerator[2] = food1;
+//        System.out.println(refrigerator[0].name);
+//
+//        // OR
+//
+//        Food[] refrigerator2 = {food1,food2,food3};
+//        System.out.println(refrigerator2[0].name);
+//        // 32 object  passing
+//
+//        CarName car1 = new CarName("BENZ");
+//        CarName car2 = new CarName("BMW");
+//
+//        Garage garage = new Garage();
+//        garage.park(car1);
+//        garage.park(car2);
+//
+//
+//        // 33 static keyword (static modifier is a single copy of a variable or method which is created and shared)
+//        //The class "owns" the static number
+//
+//        Friends friends1 = new Friends("sponge bob");
+//        Friends friends2 = new Friends("patrick");
+//        Friends friends3 = new Friends("squid ward");
+//        Friends friends4 = new Friends("sandy");
+//
+//        System.out.println(Friends.NumberOfFriends);
+//
+//        // 34 inhertance (The process where one class acquires the attributes and methods of another class)
+//
+//        Cars cars = new Cars();
+//        cars.go();
+//        System.out.println(cars.doors);
+//        System.out.println(cars.speed);
+//        System.out.println(cars.wheels);
+//
+//        Bicycles bicycles = new Bicycles();
+//        bicycles.stop();
+//        System.out.println(bicycles.pedals);
+//        System.out.println(bicycles.speed);
+//        System.out.println(bicycles.wheels);
+//
+//
+//        // 36 Super keyword (keyword refers to the super class (parent) of an object very simlar to "this" keyword)
+//        Hero hero1 = new Hero("minal murali","24","minal");
+//        Hero hero2 = new Hero("Shakthimaan","60","shakthi");
+//
+//        System.out.println(hero1.name);
+//        System.out.println(hero1.age);
+//        System.out.println(hero1.power);
+//        System.out.println(hero2.name);
+//        System.out.println(hero2.age);
+//        System.out.println(hero2.power);
+//        System.out.println(hero1.toString());
+//
+//        // 37 abstraction( abstract clases cannot be instantiated , but they can have subaclasses, abstract methods are declared without implementation)
+//
+//        Car2 car2 = new Car2();
+//        car2.go();
+//
+//
+//         //38 Access Modifier
+//
+//         //public = class , package , subclass , world
+//         //protected = class , package , subclass
+//         //no modifieer = class , package
+//         //private = class
+//
+//        
+         //39 Encapsulatoin ( private attributes be accessed throguh methods (getter and setter)
+//        
+//        
+//        Chrisnolan chrisnolan = new Chrisnolan("TeneT",150,450);
+//        System.out.println(chrisnolan.getMovieName());
+//        System.out.println(chrisnolan.getBudget());
+//        System.out.println(chrisnolan.getBoxoffice());
+//
+//        chrisnolan.setMovieName("bahubali");
+//        chrisnolan.setBudget(30);
+//        chrisnolan.setBoxoffice(150);
+//        System.out.println(chrisnolan.getMovieName());
+//        System.out.println(chrisnolan.getBudget());
+//        System.out.println(chrisnolan.getBoxoffice());
+
+//
+//
+//        // 40 Copy objects in java
+//
+//        HollowKnight knight1 = new HollowKnight("knight",100,80,"nail");
+//        HollowKnight knight2 = new HollowKnight("hornet",80,100,"needle");
+//        knight2.copy(knight1); // Or
+//        //HollowKnight knight2 = new HollowKnight(knight1);
+//        System.out.println(knight1);
+//        System.out.println(knight2);
+//        System.out.println(knight1.name);
+//        System.out.println(knight1.health);
+//        System.out.println(knight1.damage);
+//        System.out.println(knight1.weapon);
+//        System.out.println(knight2.name);
+//        System.out.println(knight2.health);
+//        System.out.println(knight2.damage);
+//        System.out.println(knight2.weapon);
+//
+//        // 41  interface
+//        // clases used = ThePenguins , AlexThelion, MerlinTheZibra , Predator , Prey
+//
+//        MerlinTheZibra merlinTheZibra = new MerlinTheZibra();
+//        AlexThelion alexThelion = new AlexThelion();
+//        ThePenguins thePenguins = new ThePenguins();
+//        merlinTheZibra.flee();
+//        alexThelion.hunt();
+//        thePenguins.flee();
+//        thePenguins.hunt();
+
+//
+//        // 42 polymorphism
+//        // classes used = Car3 , Boat , Bike , Vehicles
+//
+//        Car3 car = new Car3();
+//        Boat boat = new Boat();
+//        Bike bike = new Bike();
+//
+//        Vehicles[] vehicles = {car,boat,bike};
+//
+//        for (int i = 0; i < vehicles.length ; i++){
+//            vehicles[i].go();
+//        }
+
+//        // 43 dynamic polymorphism
+//        
+//        // classes used = Animals , Dog2 , Cat
+//
+//        Scanner hello = new Scanner(System.in);
+//        Animals animals;
+//        System.out.print("Enter 1 for dog and 2 for cat ");
+//        int choice = hello.nextInt();
+//        if(choice == 1){
+//            animals = new Dog2();
+//            animals.speak();
+//        }
+//        else if (choice == 2){
+//            animals = new Cat();
+//            animals.speak();
+//        }
+//        else{
+//            animals = new Animals();
+//            animals.speak();
+//        }
+//
+//        // 44 exception handling
+//
+//        Scanner scanner = new Scanner(System.in);
+//
+//        try {
+//            System.out.print("Enter the number to be divided: ");
+//            int x = scanner.nextInt();
+//            System.out.print("Enter the number to be divided with : ");
+//            int y = scanner.nextInt();
+//            int z = x / y;
+//            System.out.println(z);
+//        }catch (ArithmeticException e){
+//            System.out.println("You cant use zero");
+//        }
+//        catch (InputMismatchException e){
+//            System.out.println("That is not a integer");
+//        }
+//        catch (Exception e){
+//            System.out.println("Something went wrong");
+//        }
+//        finally {
+//            System.out.println("This will be printed no matter what");
+//        }
+//
+//        // 45 File class
+//
+//        File file = new File("F:/hilu/computer/java tutorial/hello world.txt");
+//        if (file.exists()){
+//            System.out.println("This file is in the computer");
+//            System.out.println(file.getPath());
+//            System.out.println(file.getAbsolutePath());
+//            System.out.println(file.isFile());
+//        }
+//        else
+//            System.out.println("This file doesnt exist in the computer");
+//        
+//        // 46 File writer (to write a file)
+//
+//        try{
+//        FileWriter writer = new FileWriter("F:/hilu/computer/java tutorial/hello world.txt");
+//        writer.write("Hello world\n ");
+//        writer.append("    by a legend");
+//        writer.close();
+//        }catch (IOException e ){
+//            e.printStackTrace();
+//        }
+//        // 47 Filer reader (to read a file)
+//
+//        /* read content of flie one by one . it returns an int which contain the byte value
+//           when there is no more elements to read it returns -1
+//         */
+//
+//
+//        try{
+//        FileReader fileReader = new FileReader("F:/hilu/computer/java tutorial/hello world.txt");
+//        int data = fileReader.read();
+//        while(data != -1){
+//            System.out.print((char)data);
+//            data = fileReader.read();
+//        }
+//        }catch (IOException e ) {
+//            e.printStackTrace();
+//        }
+
+        // 48 audio
+
+        // Come back at the end
+
+////        // 49 Gui (Graphical user interface)
+////        
+////        // classes used = MyFrame
+////
+////        JFrame frame = new JFrame();
+////        frame.setVisible(true);
+////        frame.setSize(600,600);
+////        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+////        frame.setResizable(false);
+////        frame.setTitle("Wow");
+////        frame.getContentPane().setBackground(new Color(255,140,60));
+////        //OR
+////        frame.getContentPane().setBackground(new Color(0x3ff589));
+////
+////        ImageIcon icon = new ImageIcon("F:\\hilu\\wall paper\\images\\download (2).jpg");
+////        frame.setIconImage(icon.getImage());
+////
+//        MyFrame frame1 = new MyFrame();
+
+//        // 50 labels
+//        Border border = BorderFactory.createLineBorder(new Color(255,70,20));
+//        ImageIcon icon = new ImageIcon("F:\\hilu\\wall paper\\images\\thumb-350-463477.jpg");
+//        JLabel label = new JLabel();
+//        label.setText("I'M BATMAN'");
+//        label.setIcon(icon);
+//        label.setHorizontalTextPosition(JLabel.CENTER);
+//        label.setVerticalTextPosition(JLabel.TOP);
+//        label.setHorizontalAlignment(JLabel.CENTER);
+//        label.setVerticalAlignment(JLabel.CENTER);
+//        label.setForeground(new Color(255,70,20));
+//        label.setFont(new Font("broadway",Font.BOLD,45));
+//        label.setBackground(new Color(0,0,0));
+//        label.setOpaque(true);
+//        label.setIconTextGap(10);
+//        label.setBorder(border);
+//        //label.setBounds(0,0,500,250);
+//
+//        JFrame frame = new JFrame();
+//        frame.setVisible(true);
+//        frame.setTitle("Batman");
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame.add(label);
+//        //frame.setLayout(null);
+//        frame.setIconImage(icon.getImage());
+//        frame.pack();
+//
+//        // 51 panels
+//
+//        ImageIcon icon = new ImageIcon("F:\\hilu\\wall paper\\images\\download (2).png");
+//
+//        JLabel label1 = new JLabel();
+//        label1.setIcon(icon);
+//        label1.setText("This is a text");
+//        label1.setIconTextGap(10);
+//        label1.setVerticalTextPosition(JLabel.TOP);
+//        label1.setHorizontalTextPosition(JLabel.CENTER);
+//        label1.setForeground(new Color(35,176,255));
+//        label1.setFont(new Font("broadway",Font.BOLD,20));
+//        label1.setHorizontalAlignment(JLabel.CENTER);
+//        label1.setVerticalAlignment(JLabel.TOP);
+//
+//        JPanel panel1 = new JPanel();
+//        panel1.setBackground(new Color(184,95,223));
+//        panel1.setBounds(0,0,250,250);
+//
+//
+//        JPanel panel2 = new JPanel();
+//        panel2.setBackground(new Color(120,255,120));
+//        panel2.setBounds(250,0, 250,250);
+//
+//        JPanel panel3 = new JPanel();
+//        panel3.setBackground(new Color(200,45,89));
+//        panel3.setBounds(0,250,500,250);
+//        panel3.add(label1);
+//
+//
+//        JFrame frame = new JFrame();
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame.setLayout(null);
+//        frame.setVisible(true);
+//        frame.setTitle("colors");
+//        frame.setSize(500,500);
+//        frame.setResizable(false);
+//        frame.add(panel1);
+//        frame.add(panel2);
+//        frame.add(panel3);
+//
+
+//
+//        // 52 Buttons
+
+
+
+public class MyJFrame2 extends JFrame implements ActionListener {
+//
+//
+//    JButton button;
+//    JLabel label;
+//    MyJFrame2(){
+//
+//        ImageIcon imageicon = new ImageIcon("F:\\hilu\\wall paper\\thumb-1920-938044.jpg");
+//        label = new JLabel();
+//        label.setSize(1920,1080);
+//        label.setIcon(imageicon);
+//        label.setVisible(false);
+//        label.setBounds(0,0,1920,1080);
+//
+//        ImageIcon icon = new ImageIcon("F:\\hilu\\wall paper\\images\\images (2).jpg");
+//
+//
+//        button = new JButton();
+//        button.setBounds(250,250,250,250);
+//        button.setText("Press to see dragon");
+//        button.setHorizontalTextPosition(JButton.CENTER);
+//        button.setVerticalTextPosition(JButton.TOP);
+//
+//        button.setIcon(icon);
+//        button.setFont(new Font("Comic Sans",Font.BOLD, 20));
+//        button.setBorder(BorderFactory.createEtchedBorder(6,new Color(40,10,5),Color.black));
+//        button.setFocusable(false);
+//        button.addActionListener(this);
+//        button.setForeground(new Color(15,05,03));
+//        button.setBackground(new Color(255,154,20));
+//
+//        //button.setEnabled(false); //To disable button
+//
+//        this.setVisible(true);
+//        this.setSize(750,750);
+//        this.setLayout(null);
+//        //this.setResizable(false);
+//        this.setTitle("DRAGON");
+//        this.add(button);
+//        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+//        this.add(label);
+//        this.setIconImage(icon.getImage());
+//
+//
+//
+//
+//
+//
+//
+//    }
+//    @Override
+//    public void actionPerformed(ActionEvent e){
+//        if(e.getSource() == button){
+//            label.setVisible(true);
+//            button.setVisible(false);
+//            }
+//        }
+//    }
+//        MyJFrame2 frame2 = new MyJFrame2();
+        // 53 Border layout
+//
+//        JFrame frame = new JFrame();
+//        ImageIcon icon = new ImageIcon("F:\\hilu\\wall paper\\thumb-1920-824233.jpg");
+//
+//        frame.setVisible(true);
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame.setSize(500,500);
+//        frame.setLayout(new BorderLayout(10,10));
+//
+//        JPanel panel1 = new JPanel();
+//        JPanel panel2 = new JPanel();
+//        JPanel panel3 = new JPanel();
+//        JPanel panel4 = new JPanel();
+//        JPanel panel5 = new JPanel();
+//
+//        panel1.setBackground(new Color(0x45ff53));
+//        panel2.setBackground(new Color(150,30,200));
+//        panel3.setBackground(Color.ORANGE);
+//        panel4.setBackground(Color.CYAN);
+//        panel5.setBackground(Color.MAGENTA);
+//
+//        panel1.setPreferredSize(new Dimension(100,100));
+//        panel2.setPreferredSize(new Dimension(100,100));
+//        panel3.setPreferredSize(new Dimension(100,100));
+//        panel4.setPreferredSize(new Dimension(100,100));
+//        panel5.setPreferredSize(new Dimension(100,100));
+//
+//        frame.add(panel1,BorderLayout.NORTH);
+//        frame.add(panel2,BorderLayout.SOUTH);
+//        frame.add(panel3,BorderLayout.WEST);
+//        frame.add(panel4,BorderLayout.EAST);
+//        frame.add(panel5,BorderLayout.CENTER);
+//
+//        JPanel panel11 = new JPanel();
+//        JPanel panel22 = new JPanel();
+//        JPanel panel33 = new JPanel();
+//        JPanel panel44 = new JPanel();
+//        JPanel panel55 = new JPanel();
+//
+//        panel11.setBackground(new Color(0xfff252));
+//        panel22.setBackground(new Color(15,30,200));
+//        panel33.setBackground(Color.BLACK);
+//        panel44.setBackground(Color.GRAY);
+//
+//        JLabel label = new JLabel();
+//        label.setIcon(icon);
+//        panel55.add(label);
+//
+//        panel11.setPreferredSize(new Dimension(100,100));
+//        panel22.setPreferredSize(new Dimension(100,100));
+//        panel33.setPreferredSize(new Dimension(100,100));
+//        panel44.setPreferredSize(new Dimension(100,100));
+//        panel55.setPreferredSize(new Dimension(100,100));
+//
+//        panel5.setLayout(new BorderLayout());
+//        panel5.add(panel11,BorderLayout.NORTH);
+//        panel5.add(panel22,BorderLayout.SOUTH);
+//        panel5.add(panel33,BorderLayout.WEST);
+//        panel5.add(panel44,BorderLayout.EAST);
+//        panel5.add(panel55,BorderLayout.CENTER);
+//
+//        //54 Flow layout
+//
+//        JFrame frame = new JFrame();
+//
+//        ImageIcon icon1 = new ImageIcon("F:\\hilu\\wall paper\\New folder\\xy881d6i87l61.png");
+//        ImageIcon icon2 = new ImageIcon("F:\\hilu\\wall paper\\New folder\\6gim3xdsmcb71.jpg");
+//        ImageIcon icon3 = new ImageIcon("F:\\hilu\\wall paper\\New folder\\105-1055917_popular-firewatch-wallpaper-high-resolution-firewatch-wallpaper-hd.jpg");
+//        ImageIcon icon4 = new ImageIcon("F:\\hilu\\wall paper\\New folder\\9893c6d35ccc953e39b7bd014cdd4626.jpg");
+//        ImageIcon icon5 = new ImageIcon("F:\\hilu\\wall paper\\New folder\\firewatch-video-game-art-minimalism-simple-hd-wallpaper-preview (1).jpg");
+//
+//        JLabel label1 = new JLabel();
+//        JLabel label2 = new JLabel();
+//        JLabel label3 = new JLabel();
+//        JLabel label4 = new JLabel();
+//
+//        label1.setIcon(icon1);
+//        label2.setIcon(icon2);
+//        label3.setIcon(icon3);
+//        label4.setIcon(icon4);
+//
+//
+//        JPanel panel1 = new JPanel();
+//        JPanel panel2 = new JPanel();
+//        JPanel panel3 = new JPanel();
+//        JPanel panel4 = new JPanel();
+//        panel1.add(label1);
+//        panel2.add(label2);
+//        panel3.add(label3);
+//        panel4.add(label4);
+//        panel1.setPreferredSize(new Dimension(300,300));
+//        panel2.setPreferredSize(new Dimension(300,300));
+//        panel3.setPreferredSize(new Dimension(300,300));
+//        panel4.setPreferredSize(new Dimension(300,300));
+//
+//        frame.add(panel1);
+//        frame.add(panel2);
+//        frame.add(panel3);
+//        frame.add(panel4);
+//        frame.setIconImage(icon5.getImage());
+//        frame.setTitle("Watch  tower");
+//        frame.setSize(1000,1000);
+//        frame.setVisible(true);
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame.setLayout(new FlowLayout(FlowLayout.CENTER,25,50));
+//        frame.setLayout(new FlowLayout(FlowLayout.LEADING,25,50));
+//        frame.setLayout(new FlowLayout(FlowLayout.LEFT,25,50));
+//        frame.setLayout(new FlowLayout(FlowLayout.RIGHT,25,50));
+//        frame.setLayout(new FlowLayout(FlowLayout.TRAILING,25,50));
+//        //frame.setLayout(new GridLayout());
+//
+//        // 55 Grid layout
+//
+//        JFrame frame = new JFrame();
+//
+//        JButton button1 = new JButton("1");
+//        frame.add(button1);
+//        button1.setText("Hello");
+//        button1.setBackground(new Color(200,233,52));
+//        button1.setFont(new Font("Comic sans",Font.ITALIC,25));
+//        button1.setFocusable(false);
+//        button1.setForeground(Color.BLACK);
+//        button1.setBorder(BorderFactory.createEtchedBorder(200,Color.red,Color.black));
+//
+//        //OR
+//
+//        frame.add(new JButton("2"));
+//        frame.add(new JButton("3"));
+//        frame.add(new JButton("4"));
+//        frame.add(new JButton("5"));
+//        frame.add(new JButton("6"));
+//        frame.add(new JButton("7"));
+//        frame.add(new JButton("8"));
+//        frame.add(new JButton("9"));
+//        frame.add(new JButton("10"));
+//        frame.add(new JButton("11"));
+//
+//
+//
+//        frame.setSize(1000,1000);
+//        frame.setVisible(true);
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        //frame.setLayout(new FlowLayout(FlowLayout.CENTER,30,10));
+//        frame.setLayout(new GridLayout(5,3,30,50));
+//
+//        // 56 Layered Pane
+//
+//
+//        JPanel panel1 = new JPanel();
+//        panel1.setOpaque(true);
+//        panel1.setBounds(100,100,200,200);
+//        panel1.setBackground(new Color(62,123,234));
+//
+//        JPanel panel2 = new JPanel();
+//        panel2.setOpaque(true);
+//        panel2.setBounds(50,50,100,100);
+//        panel2.setBackground(new Color(13,213,154));
+//
+//        JPanel panel3 = new JPanel();
+//        panel3.setOpaque(true);
+//        panel3.setBounds(250,50,100,100);
+//        panel3.setBackground(new Color(252,103,74));
+//
+//        JPanel panel4 = new JPanel();
+//        panel4.setOpaque(true);
+//        panel4.setBounds(125,75,150,150);
+//        panel4.setBackground(new Color(252,223,4));
+//
+//        JLayeredPane pane = new JLayeredPane();
+//        pane.setBounds(0,0,500,500);
+//        //pane.add(panel1,JLayeredPane.DRAG_LAYER);
+//        //pane.add(panel1,JLayeredPane.POPUP_LAYER);
+//        //pane.add(panel1,JLayeredPane.MODAL_LAYER);
+//        //pane.add(panel1,JLayeredPane.PALETTE_LAYER);
+//        pane.add(panel1,JLayeredPane.DEFAULT_LAYER);
+//        pane.add(panel2,Integer.valueOf(1));
+//        pane.add(panel3,Integer.valueOf(1));
+//        pane.add(panel4,Integer.valueOf(2));
+//
+//        JFrame frame = new JFrame();
+//        frame.setVisible(true);
+//        frame.setSize(500,500);
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame.add(pane);
+
+//        // 57 Opening a new window
+////      Classes used = LaunchPage ,NextWindow ,NewWindow
+////
+////        JButton button = new JButton();
+////        JFrame frame = new JFrame();
+////
+////        LaunchPage() {
+////
+////            button.addActionListener(this);
+////
+////
+////            frame.setVisible(true);
+////            frame.setSize(1000, 1000);
+////            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+////            frame.setLayout(new GridLayout());
+////
+////            ImageIcon icon = new ImageIcon("F:\\hilu\\wall paper\\images\\download (2).jpg");
+////            button.setText("change");
+////            button.setFont(new Font("Comic Sans",Font.ITALIC,80));
+////            button.setIconTextGap(10);
+////            button.setIcon(icon);
+////            frame.add(button);
+////        }
+////
+////        @Override
+////        public void actionPerformed(ActionEvent e) {
+////            if (e.getSource() == button) {
+////                long value = Math.round(Math.random()*10);
+////                if(value %2 == 0){
+////                    NewWindow newWindow = new NewWindow();}
+////                else{
+////                    NextWindow nextWindow = new NextWindow();
+////                }
+////                frame.dispose();
+////
+////            }
+////
+////        }
+//        LaunchPage launchPage = new LaunchPage();
+//        // 58 JOPTION pane
+//
+//        JOptionPane.showMessageDialog(null,"Hello , this is a message ","HI",JOptionPane.PLAIN_MESSAGE);
+//        JOptionPane.showMessageDialog(null,"Hello , this is a informatino ","HI",JOptionPane.INFORMATION_MESSAGE);
+//        JOptionPane.showMessageDialog(null,"Hello , this is a error ","HI",JOptionPane.ERROR_MESSAGE);
+//        JOptionPane.showMessageDialog(null,"Hello , this is suppose to be a question ","HI",JOptionPane.QUESTION_MESSAGE);
+//        JOptionPane.showMessageDialog(null,"Hello , this is a warning ","HI",JOptionPane.WARNING_MESSAGE);
+//
+//        JOptionPane.showConfirmDialog(null,"Hello","this is also a message ",JOptionPane.YES_NO_CANCEL_OPTION);
+//
+//        String k = JOptionPane.showInputDialog("Type something");
+//        System.out.println(k);
+//
+//        JOptionPane.showOptionDialog(null,
+//                "This is an another message ",
+//                "THE MESSAGE",
+//                JOptionPane.YES_NO_CANCEL_OPTION,
+//                JOptionPane.QUESTION_MESSAGE,
+//                null,
+//                null,
+//                0);
+//        ImageIcon icon = new ImageIcon("F:\\hilu\\wall paper\\images\\download (2).jpg");
+//
+//        String questions[]= {"Yes","NO","doesnt matter","ignore" };
+//        String name = JOptionPane.showInputDialog("What is your name :");
+//                int answer = JOptionPane.showOptionDialog(null,
+//                "Are you a gamer ",
+//                "The judgement",
+//                JOptionPane.YES_NO_CANCEL_OPTION,
+//                JOptionPane.QUESTION_MESSAGE,
+//                icon,
+//                questions,
+//                2);
+//                if(answer == 0){
+//                    while(true) {
+//                        JOptionPane.showMessageDialog(null, name + ", your computer has a virus for lying", "You Deserver it", JOptionPane.ERROR_MESSAGE);
+//                    }}
+//                else if(answer == 1) {
+//                    JOptionPane.showMessageDialog(null, name + ", you are not a gamer", "hello", JOptionPane.INFORMATION_MESSAGE);
+//                }
+//                else if(answer == 2){
+//                    JOptionPane.showMessageDialog(null,"IT DOES",name + " is an idiot",JOptionPane.WARNING_MESSAGE);}
+//                else if(answer == 3){
+//                    JOptionPane.showMessageDialog(null,name + "hurt computers feeling","hello",JOptionPane.QUESTION_MESSAGE);}
+//                else{
+//                    JOptionPane.showMessageDialog(null,"you are honest","hello",JOptionPane.INFORMATION_MESSAGE);
+//                }
+
+//        // 59 Textfields
+//
+//        MyTexfield texfield = new MyTexfield();
+//
+//
+////        JButton button = new JButton();
+////        TextField field = new TextField();
+////        MyTexfield(){
+////
+////
+////
+////            field.getText();
+////            field.setPreferredSize(new Dimension(350,60));
+////            field.setText("Type here");
+////            field.setFont(new Font("Candela",Font.BOLD,50));
+////            //field.setEditable(false);
+////            //field.setFocusable(false);
+////            field.setForeground(new Color(20,20,20));
+////            field.setBackground(new Color(9,234,134));
+////
+////            button.setText("Submit");
+////            button.addActionListener(this);
+////
+////            this.setLayout(new FlowLayout());
+////            this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+////            this.add(button);
+////            this.add(field);
+////            this.pack();
+////            this.setVisible(true);
+////
+////        }
+////
+////        public void actionPerformed(ActionEvent e){
+////            if(e.getSource() == button){
+////                System.out.println(field.getText());
+////            }
+////        }
+
+
+//        // 60 check box
+//
+//        MyCheckBox box = new MyCheckBox();
+////
+////
+////        JButton button;
+////        JCheckBox box;
+////        ImageIcon icon1 ;
+////        ImageIcon icon2 ;
+////
+////        MyCheckBox(){
+////
+////
+////            button = new JButton();
+////            button.setText("Submit");
+////            button.addActionListener(this);
+////
+////            icon1 = new ImageIcon("F:\\hilu\\wall paper\\images\\download (2).jpg");
+////            icon2 = new ImageIcon("F:\\hilu\\wall paper\\images\\images (2).jpg");
+////            box = new JCheckBox();
+////            box.setText("CHANGE");
+////            box.setFocusable(false);
+////            box.setIconTextGap(50);
+////            box.setFont(new Font("Bebas",Font.BOLD,40));
+////            box.setForeground(new Color(20,20,20));
+////            box.setBackground(new Color(9,234,134));
+////            box.setIcon(icon1);
+////            box.setSelectedIcon(icon2);
+////
+////            this.setLayout(new FlowLayout());
+////            this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+////            this.add(box);
+////            this.add(button);
+////            this.pack();
+////            this.setVisible(true);
+////
+////        }
+////
+////
+////
+////
+////        public void actionPerformed(ActionEvent e){
+////            if(e.getSource() == button){
+////                if(box.isSelected() == true){
+////                    System.out.println("Dragon");
+////                }
+////                else{
+////                    System.out.println("Gamer");
+////                }
+////            }
+////        }
+//        // 61 Radio Button
+//
+//        MyRadioButton radioButton = new MyRadioButton();
+////
+////        JRadioButton pizzaButton ;
+////        JRadioButton noodlesButton ;
+////        JRadioButton burgerButton ;
+////        ButtonGroup group;
+////        ImageIcon icon1 ;
+////        ImageIcon icon2 ;
+////        ImageIcon icon3;
+////
+////        MyRadioButton(){
+////            icon1 = new ImageIcon("F:\\hilu\\wall paper\\images\\download (2).jpg");
+////            icon2 = new ImageIcon("F:\\hilu\\wall paper\\images\\images (2).jpg");
+////            icon3 = new ImageIcon("F:\\hilu\\wall paper\\images\\Untitled-4.jpg");
+////
+////
+////            pizzaButton = new JRadioButton("Pizza");
+////            noodlesButton = new JRadioButton("Noodles");
+////            burgerButton = new JRadioButton("Burger");
+////            pizzaButton.addActionListener(this);
+////            pizzaButton.setIcon(icon1);
+////            noodlesButton.setIcon(icon2);
+////            burgerButton.setIcon(icon3);
+////            noodlesButton.addActionListener(this);
+////            burgerButton.addActionListener(this);
+////            group = new ButtonGroup();
+////            group.add(pizzaButton);
+////            group.add(noodlesButton);
+////            group.add(burgerButton);
+////
+////
+////            this.add(pizzaButton);
+////            this.add(noodlesButton);
+////            this.add(burgerButton);
+////
+////            this.setLayout(new FlowLayout());
+////            this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+////            this.pack();
+////            this.setVisible(true);
+////
+////        }
+////
+////
+////        @Override
+////        public void actionPerformed(ActionEvent e) {
+////            if(e.getSource() == pizzaButton){
+////                System.out.println("You like pizza");
+////            }
+////            else if (e.getSource() == noodlesButton){
+////                System.out.println("You like noodles");
+////            }
+////            else{
+////                System.out.println("You like burger");
+////            }
+////
+////        }
+       // 62 combo box
+//
+//        TheComboBox box = new TheComboBox();
+////
+////        JComboBox box;
+////        JComboBox box2;
+////
+////        TheComboBox(){
+////
+////
+////            String food[] = {"pizza","dorito","sandwich"};
+////            box = new JComboBox(food);
+////            box.addItem("burger");
+////            box.insertItemAt("noodles",2);
+////            box.addActionListener(this);
+////            box.setFont(new Font("Comic Sans", Font.BOLD,50));
+////            System.out.println(box.getItemCount());
+//////                box.removeItemAt(1);
+//////                box.removeItem("pizza");
+//////                box.removeAllItems();
+////            box.setSelectedIndex(3);
+////
+////
+////
+////            // For using primitive type use wrapper class
+////
+////
+////            Integer numbers[] = {1,2,5,4};
+////            box2 = new JComboBox(numbers);
+////            box2.addItem(4);
+////            box2.insertItemAt(3,2);
+////            box2.addActionListener(this);
+////            box2.setFont(new Font("Comic Sans", Font.BOLD,50));
+////            System.out.println(box2.getItemCount());
+//////                box2.removeItemAt(1);
+//////                box2.removeItem(4);
+//////                box2.removeAllItems();
+////            box2.setSelectedIndex(3);
+////
+////
+////
+////            this.add(box);
+////            this.add(box2);
+////            this.setVisible(true);
+////            this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+////            this.setSize(500,800);
+////            this.setLayout(new FlowLayout());
+////            this.pack();
+////
+////        }
+////        public void actionPerformed(ActionEvent e){
+////            if (e.getSource() == box){
+////                System.out.println(box.getSelectedItem());
+////            }
+////            if (e.getSource() == box2){
+////                System.out.println(box2.getSelectedItem());
+////            }
+////        }
+////
+////    }
+//
+//        //  63 slider
+//
+//        MySlider slider = new MySlider();
+//
+////
+////    JSlider slider;
+////    JLabel label;
+////    JPanel panel;
+////
+////    MySlider(){
+////        slider = new JSlider(0,200,100);
+////        slider.setPreferredSize(new Dimension(500,800));
+////        slider.setPaintTicks(true);
+////        slider.setMinorTickSpacing(10);
+////        slider.setPaintTrack(true);
+////        slider.setMajorTickSpacing(25);
+////        slider.setPaintLabels(true);
+////        slider.setOrientation(JSlider.VERTICAL); //OR slider.setOrientation(SwingConstant.VERTICAL);
+////        slider.setFont(new Font("Ariel",Font.ITALIC,40));
+////
+////
+////        label = new JLabel();
+////        label.setFont(new Font("Comic Sans",Font.BOLD,35));
+////        slider.addChangeListener(this);
+////        label.setText("Hello the value is " + slider.getValue());
+////
+////        panel = new JPanel();
+////        panel.add(label);
+////
+////
+////
+////        this.setVisible(true);
+////        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+////        this.setSize(500,800);
+////        this.setLayout(new FlowLayout());
+////        this.add(slider);
+////        this.add(panel);
+////        this.pack();
+////    }
+////    public void stateChanged(ChangeEvent e){
+////        if (e.getSource() == slider){
+////            label.setText("Hello the value is " + slider.getValue());
+////        }
+////    }
+
+        // 64 Progres bar
+//
+//        MyProgressBar bar = new MyProgressBar();
+//
+//
+////
+////
+////
+////        JProgressBar bar = new JProgressBar(0,100);
+////        MyProgressBar(){
+////
+////
+////
+////            bar.setStringPainted(true);
+////            bar.setValue(0);
+////            bar.setSize(400,100);
+////            bar.setBounds(0,400,700,200);
+////            bar.setBackground(Color.black);
+////            bar.setForeground(Color.red);
+////            bar.setFont(new Font("Comic Sans",Font.ITALIC,10));
+////            this.add(bar);
+////            this.setSize(400,400);
+////            this.setLayout(new FlowLayout());
+////            this.setVisible(true);
+////            this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+////            fill();
+////        }
+////
+////
+////        void fill(){
+////            int newValue = 0;
+////            while (newValue < 101){
+////                bar.setValue(newValue);
+////                try{Thread.sleep(50);}catch (InterruptedException e){e.printStackTrace();}
+////                newValue ++;
+////            }
+////            bar.setString("Done :)");
+////        }
+////
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}

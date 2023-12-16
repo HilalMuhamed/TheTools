@@ -1,0 +1,196 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    font-family: 'Times New Roman';
+}
+
+
+.body2{
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color:azure;
+}
+
+
+.container2{
+    width: 1500px;
+    height: 800px;
+    border: 1px solid;
+    background-color: white;
+    display:flex ;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: center;
+    
+}
+
+
+.container2 h1{
+    text-align: center;
+}
+
+
+.first-row{
+    display: flex;
+}
+
+
+.owner{
+    width: 100%;
+    margin-right: 40px;
+}
+
+
+.input-field2{
+    border: 1px solid #999;
+}
+
+
+.input-field2 input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+
+.selection2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.selection2 select{
+    padding: 10px 10px;
+    margin: auto;
+    align-items:center ;
+}
+
+
+a2{
+    background-color:transparent;    
+    color: antiquewhite;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+
+.a2 :hover{
+    background-color: rgb(4, 198, 241);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    font-family: 'Times New Roman';
+}
+
+
+.body2{
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color:azure;
+}
+
+
+.container2{
+    width: 1500px;
+    height: 800px;
+    border: 1px solid;
+    background-color: white;
+    display:flex ;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: center;
+    
+}
+
+
+.container2 h1{
+    text-align: center;
+}
+
+
+.first-row{
+    display: flex;
+}
+
+
+.owner{
+    width: 100%;
+    margin-right: 40px;
+}
+
+
+.input-field2{
+    border: 1px solid #999;
+}
+
+
+.input-field2 input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+
+.selection2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.selection2 select{
+    padding: 10px 10px;
+    margin: auto;
+    align-items:center ;
+}
+
+
+a2{
+    background-color:transparent;    
+    color: antiquewhite;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+
+.a2 :hover{
+    background-color: rgb(4, 198, 241);
+}

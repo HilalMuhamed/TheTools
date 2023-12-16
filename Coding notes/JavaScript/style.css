@@ -1,0 +1,61 @@
+#eyes,#eyes img{
+    position : absolute;
+}
+#white,#white img{
+    position : absolute;
+}
+#boom {
+    position: absolute;
+    top : 40px;
+    right: 730px;
+    width:500px;
+    height:500px;
+    /*background: url(https://i.pinimg.com/originals/c9/82/78/c98278524c3579fadfeffbce0d12681c.gif);*/
+    background-size: cover;;
+    animation: crash 3s linear;
+}
+@keyframes crash{
+    0%{
+        translate: -100vw;
+        background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/222c05ed-c612-4285-a2fe-7da094554b67/d7meqr4-57cc0308-6a61-49c5-b86a-00bce1a5911e.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzIyMmMwNWVkLWM2MTItNDI4NS1hMmZlLTdkYTA5NDU1NGI2N1wvZDdtZXFyNC01N2NjMDMwOC02YTYxLTQ5YzUtYjg2YS0wMGJjZTFhNTkxMWUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.cTr-esmArC4NbZwiQip5CRxIIZHDY2FQUcGfxOXB4O8);
+
+    }
+    49%{
+        background-image:  url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/222c05ed-c612-4285-a2fe-7da094554b67/d7meqr4-57cc0308-6a61-49c5-b86a-00bce1a5911e.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzIyMmMwNWVkLWM2MTItNDI4NS1hMmZlLTdkYTA5NDU1NGI2N1wvZDdtZXFyNC01N2NjMDMwOC02YTYxLTQ5YzUtYjg2YS0wMGJjZTFhNTkxMWUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.cTr-esmArC4NbZwiQip5CRxIIZHDY2FQUcGfxOXB4O8);
+    }
+
+    50%{
+        translate: 0;
+        background-image: url(https://i.pinimg.com/originals/c9/82/78/c98278524c3579fadfeffbce0d12681c.gif);
+    }
+    60%{
+        background-image: url(https://i.pinimg.com/originals/c9/82/78/c98278524c3579fadfeffbce0d12681c.gif);
+    }
+}
+
+@keyframes break{
+    50%{
+        rotate:0deg;
+        color: white;
+    }
+    52%{
+        rotate:1deg;
+        color:red;
+    }
+    54%{
+        rotate: -1deg;
+    }
+    56%{
+        rotate:2deg;
+    }
+    58%{
+        rotate:-2deg;
+    }
+    60%{
+        rotate:6deg;
+        color:white;
+    }
+    100%{
+        rotate:6
+    }
+}

@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bebas+Neue&family=Bungee+Shade&family=Caesar+Dressing&family=Chewy&family=Dancing+Script&family=Edu+QLD+Beginner&family=Faster+One&family=Finger+Paint&family=Fredericka+the+Great&family=Inspiration&family=Lobster&family=Nobile&family=Noto+Music&family=Noto+Sans+Anatolian+Hieroglyphs&family=Noto+Sans+Egyptian+Hieroglyphs&family=Noto+Sans+Linear+B&family=Noto+Sans+Meroitic&family=Noto+Sans+Nabataean&family=Playfair+Display&family=Poppins&family=Press+Start+2P&family=Rubik+80s+Fade&family=Rubik+Glitch&family=Rubik+Marker+Hatch&family=Rubik+Moonrocks&family=Rubik+Pixels&family=Stick&family=Titan+One&family=VT323&display=swap");
+body {
+  margin: 0;
+  height: 100vh;
+  background: #0b0b0b;
+  font-family: "Nobile";
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.cotainer {
+  padding: 2em;
+  height: 100vh;
+}
+.cotainer:first-child {
+  display: grid;
+  grid-template-rows: 10% 30% auto;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 8rem;
+  font-weight: normal;
+  font-size: 3em;
+  line-height: 0.9em;
+}
+
+p {
+  margin: 20px;
+  line-height: 1.5em;
+  color: #dfdfdf;
+}
+
+.line {
+  align-self: end;
+  width: 50%;
+  height: 50%;
+  margin-bottom: 40em;
+  position: relative;
+}
+
+header {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.subtext {
+  margin-top: 0;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
+.seconday {
+  margin-top: -3em;
+}
+
+h2 {
+  color: white;
+  font-size: 3em;
+  margin: 20px;
+  font-weight: normal;
+}
+
+.falling, .forest {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.falling {
+  top: -30%;
+}
+
+.forest {
+  top: 0%;
+}
+
+@media only screen and (min-width: 665px) {
+  .falling {
+    top: -25%;
+  }
+  .forest {
+    top: -5%;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .falling {
+    top: -60%;
+  }
+  .forest {
+    top: -40%;
+  }
+}/*# sourceMappingURL=main.css.map */

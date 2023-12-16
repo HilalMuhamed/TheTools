@@ -1,0 +1,209 @@
+
+
+body 
+{
+    background-image: linear-gradient(to bottom, white, rgb(255, 182, 48));
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-image: linear-gradient(to right, #333, #1a1a1a);
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+nav
+{
+    margin:1px;
+    color: #fff;
+    
+}
+nav ul
+{
+    list-style-type:none;
+    display:flex;
+    gap:40px;
+    margin:0;
+}
+header a
+{
+    text-decoration:none;
+    color:rgb(255, 232, 169);
+    text-transform:uppercase;
+    font-family: 'Poppins';
+    font-size:20px;
+    position:relative;
+    
+}
+header nav li a:hover
+{
+    border-bottom:2px solid rgb(56, 56, 56);
+    text-shadow: 0px 0px 10px white;
+}
+#contact
+{
+    border-bottom:2px solid rgb(150,150,150);
+}
+#logo
+{
+    
+    color:rgb(255, 251, 241);
+    font-size:50px;
+    text-shadow: 0px 0px 5px rgb(255, 246, 219);
+}
+i
+{
+    transform: scale(1.5);
+}
+i:hover
+{
+    transform: scale(2);
+}
+h2{
+
+    font-family: 'Poppins';
+    font-size:50px;
+    margin:2px;
+    padding:10px;
+    font-weight:bold;
+    transition: transform text-decoration 0.3s ease-in-out;
+}
+
+form
+{
+    font-family: 'Poppins';
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    
+}
+.input-box
+{
+    
+    height: 80px;
+    width: 800px;
+    margin: 50px ;
+}
+.input
+{
+    font-family: 'Poppins';
+    width: 100%;
+    height: 10px;
+    background:transparent;
+    border: 2px solid rgb(44, 14, 14);
+    border-radius: 5px;
+    outline:none;
+    padding: 10px;
+    color:rgb(44, 14, 14);
+    font-weight: 500;
+    font-size:15px;
+}
+.input:hover{
+    transform: scale(1.02);
+  }
+
+#Message
+{
+    height: 150px;
+}
+#contacttext
+{
+    text-align: center;
+    
+    color:rgb(29, 20, 20);
+}
+#contacttext:hover{
+    transform: scale(1.1);
+  }
+.theimage
+{
+    border-radius: 50%;
+    width:500px;
+    display: flex;
+    margin: 50px auto;
+    transition: transform 0.3s ease-in-out;
+}
+.theimage:hover {
+    transform: scale(1.1);
+  }
+
+#icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+
+.message
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    border: rgb(44, 14, 14) 3px solid;
+    border-radius: 20px;
+}
+.SomeText{
+    color:rgb(29, 20, 20);
+
+    text-align: center;
+}
+.SomeText:hover {
+    transform: scale(1.01);
+    text-decoration: underline rgb(29, 20, 20);
+    text-decoration-thickness: 4px; 
+}
+
+svg
+{
+    position: fixed;
+    bottom: -400px;
+    right: 0;
+}
+svg:hover{
+    transform: scale(1.1);
+  }
+.overlay
+{
+    position:absolute;
+    z-index: 999;
+    background: white;
+    margin:auto;
+    width: 100%;
+    height: 100%;
+    animation: reveal 1.5s ease-in  forwards;
+    transform-origin:bottom;
+}
+@keyframes reveal
+{
+    from{transform:scaleY(1);}
+    to{transform:scaleY(0);}
+}
+main
+{
+    font-size:20px;
+    font-family:'Playfair Display';
+    font-weight:normal;
+    margin: 50px;
+    display:flex;
+    justify-content: center;
+    gap:300px;
+    align-items: space-between;
+    animation:growIn 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    transform: scale(.2);
+}
+@keyframes growIn
+{
+    to{transform:scale(1);}
+}

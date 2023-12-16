@@ -1,0 +1,67 @@
+*.img{
+    width: 1000;
+    height: 1000;
+    border: 1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{ 
+    font-family: "Ink Free";
+    width: 100%;
+    color:whitesmoke;
+    background:  url(pexels-cottonbro-studio-4033340.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+}
+
+.navbar{ 
+    position: relative;
+    left:40%;
+    width: 1200px;
+    height: 76px;
+    margin: auto;
+}
+
+.icon{ 
+    width: 203px;
+    float: left;
+    height: 75px;
+    
+}
+
+.menu{ 
+    width: 390px;
+    float: left;
+    height: 80px;
+}
+
+ul{ 
+    float: left;
+    display:flex ;
+    justify-content: center;
+    align-items:center;
+}
+
+ul li{ 
+      list-style: none;
+      margin-left: 65px;
+      margin-top: 30px;
+      font-size: 16px;
+ }
+
+ ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: "Ink free";
+    font-weight: bold;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+ }
+
+ ul li a:hover{
+    color: rgb(20, 20, 20);
+ }

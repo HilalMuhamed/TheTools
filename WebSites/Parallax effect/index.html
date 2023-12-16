@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="logo">THE Logo</a>
+            <nav>
+                <svg width="40" height="17" viewBox="0 0 40 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="14" width="40" height="3" fill="black"/>
+                    <rect y="14" width="40" height="3" fill="black"/>
+                    <rect y="7" width="40" height="3" fill="black"/>
+                    <rect y="7" width="40" height="3" fill="black"/>
+                    <rect width="40" height="3" fill="black"/>
+                    <rect width="40" height="3" fill="black"/>
+                </svg>
+                    
+            </nav> 
+        </header>
+        <h1 class="hello">You will fall down</h1>
+        <div class ="line"></div>
+    </div>
+    <div class="container secondary">
+        <h2>Fall</h2>
+        <p class="subtext">why do we fall</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quo tempora commodi ex culpa facilis consectetur ullam mollitia nostrum optio reprehenderit numquam sunt, cum obcaecati, totam saepe alias? Expedita, quod.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quo tempora commodi ex culpa facilis consectetur ullam mollitia nostrum optio reprehenderit numquam sunt, cum obcaecati, totam saepe alias? Expedita, quod.</p>
+    </div>
+    <img src="pexels-vlad-bagacian-1061623 1.png" alt="Bakcground" class  ="forest ">
+    <img src="pexels-henry-_-co-1793525-removebg-preview (1).png" alt="Background " class="falling">
+
+    <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+    <script>
+    window.onload = function ()
+    {
+    lax.init()
+    lax.addDriver("scrollY", function() {
+      return window.scrollY;
+    });
+    lax.addElements('.hello',
+    {  
+    scrollY: {  
+    translateY: [           // CSS property
+    ["elInY", "elInY", "elOutY"],
+          [0, "elOutY", 0],
+          // Animation value map
+      {inertia: 100}]}},
+      {
+        style:
+        {transform: "translateY(10)",
+        transition: "transform 0.3s ease-out"}})
+        lax.addElements('.container secondary',
+    {  
+    scrollY: {  
+    translateY: [           // CSS property
+    ["elInY", "elInY", "elOutY"],
+          ["elOutY",0 , 0],
+          // Animation value map
+      {inertia: 100}]}},
+      {
+        style:
+        {transform: "translateY(10)",
+        transition: "transform 0.3s ease-out"}})
+    }
+    </script>
+    
+
+
+</body>
+</html>
